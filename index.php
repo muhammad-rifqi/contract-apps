@@ -13,41 +13,6 @@
     <link href="css/public-app.css" rel="stylesheet">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-    <script>
-
-<script>
-	
-	function login(){
-			var hr = new XMLHttpRequest();
-			var url = "cek_login.php";
-			var name = document.getElementById("username").value;
-			var email = document.getElementById("password").value;;
-			var vars = "username="+name+"&password="+email;
-			hr.open("POST", url, true);
-			hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-			hr.onreadystatechange = function() {
-				if(hr.readyState == 4 && hr.status == 200) {
-					var return_data = hr.responseText;
-						if(return_data == "success"){
-							window.location="dashboard.php";
-						}else{
-						swal({
-						  title: "Login Failed",
-						  text: return_data,
-						  icon: "error",
-						}).then(function() {
-							window.location = "index.php";
-						});
-						}
-				}
-			}
-			hr.send(vars); 
-			}
-			
-		</script>
-		
-
-    </script>
 </head>
 
 <body id="public-5" class="app">
