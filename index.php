@@ -37,22 +37,35 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text bg-primary font-weight-bold"
                                 style="background-color: rgb(10 122 127) !important;">Tahun</div>
-                        </div> <select class="form-control form-control-sm" v-model="tahun">
-                            <option v-for="th in listTahun" :key="th" :value="th">{{th}}</option>
+                        </div> <select class="form-control form-control-sm" name="tahun">
+                            <option value="2023">2023</option>
                         </select>
                     </div>
                 </div>
                 <ul class="navbar-nav">
-                    <li class="nav-item font-weight-bold" v-for="(a,id) in menu" :class="{'active': curMenu === a}"> <a
-                            class="nav-link mr-3" @click.prevent="loadPage(a)" href="#">{{a.nama}} <span
+                    <li class="nav-item font-weight-bold"> <a
+                            class="nav-link mr-3"href="#"> Sample Name <span
                                 class="sr-only">(current)</span></a> </li>
-                    <li class="nav-item font-weight-bold"> <a class="nav-link" href="admin"><i
-                                class="fa fa-user mr-2"></i> Login<span class="sr-only">(current)</span></a> </li>
+                    <li class="nav-item font-weight-bold"> <a class="nav-link" href="admin">Login<span class="sr-only">(current)</span></a> </li>
                 </ul>
             </div>
         </nav>
+
+    
         <div class="p-0 d-flex flex-column flex-wrap">
-            <div id="content"> </div>
+            <div id="content"> 
+
+            <div class="container container-bigger bg-white" style="height: 1000px">
+            <div class="row">
+                <div class="col-12 px-0">
+                   
+                </div>
+            </div>
+
+            </div>
+
+
+            </div>
             <div class="container container-bigger bg-white">
                 <div class="row">
                     <div class="col-12 px-0">
@@ -63,6 +76,7 @@
                 </div>
             </div>
         </div>
+        
     </div>
     <div class="modal fade" id="dm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-danger" role="document">
@@ -77,11 +91,7 @@
                         data-dismiss="modal">Close</button> </div>
             </div>
         </div>
-    </div>
-    <script src="js/highcharts.js"></script>
-    <script src="js/highcharts-more.js"></script>
-    <script src="js/modules/solid-gauge.js"></script>
-    <script src="js/public-app.js"></script>
+    <!-- </div>
 </body>
 
 </html>
