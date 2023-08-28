@@ -49,11 +49,12 @@
           <span>Beranda</span></a>
         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
+          <h6 class="collapse-header">Data Tender:</h6>
             <a class="collapse-item" href="#">Tender</a>
             <a class="collapse-item" href="#">Non Tender</a>
             <a class="collapse-item" href="#">Pencatatan Non Tender</a>
             <a class="collapse-item" href="#">Pencatatan Swakelola</a>
-            <a class="collapse-item" href="#">Pencatatan Pengadaan Darurat</a>
+            <a class="collapse-item" href="#">Pengadaan Darurat</a>
           </div>
         </div>
       </li>
@@ -76,24 +77,24 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Data Paket:</h6>
-            <a class="collapse-item" href="#">Buttons</a>
-            <a class="collapse-item" href="#">Cards</a>
+            <a class="collapse-item" href="#">Sample 1</a>
+            <a class="collapse-item" href="#">Sample 2</a>
           </div>
         </div>
       </li>
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
-          aria-controls="collapseTwo">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true"
+          aria-controls="collapseThree">
           <i class="fas fa-fw fa-table"></i>
           <span>Inbox</span>
         </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Data Inbox:</h6>
-            <a class="collapse-item" href="#">Buttons</a>
-            <a class="collapse-item" href="#">Cards</a>
+            <a class="collapse-item" href="#">Sample 1</a>
+            <a class="collapse-item" href="#">Sample 2</a>
           </div>
         </div>
       </li>
