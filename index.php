@@ -63,8 +63,8 @@
                         <div class="row">
                                 <div class="col-4 px-1">
                                     <div class="card shadow mb-4">
-                                            <div class="card-header py-3">
-                                                <h6 class="m-0 font-weight-bold text-primary">Data Terbaru</h6>
+                                            <div class="card-header py-3 bg-success">
+                                                <h6 class="m-0 font-weight-bold text-default">Data Terbaru</h6>
                                             </div>
                                                 <div class="card-body">
                                                     
@@ -72,8 +72,8 @@
                                                     <div class="row">
                                                         <div class="col">
                                                                 <div class="card shadow mb-4">
-                                                                    <div class="card-header py-3">
-                                                                    <h6 class="m-0 font-weight-bold text-success">Penyedia</h6>
+                                                                    <div class="card-header py-3 bg-success">
+                                                                    <h6 class="m-0 font-weight-bold text-default">Penyedia</h6>
                                                                     </div>
                                                                     <div class="card-body">
                                                                         sdfsdfsdf
@@ -82,8 +82,8 @@
                                                         </div>
                                                         <div class="col">
                                                                 <div class="card shadow mb-4">
-                                                                    <div class="card-header py-3">
-                                                                    <h6 class="m-0 font-weight-bold text-success">Charts</h6>
+                                                                    <div class="card-header py-3 bg-success">
+                                                                    <h6 class="m-0 font-weight-bold text-default">Charts</h6>
                                                                     </div>
                                                                     <div class="card-body">
                                                                         sdfsdfsdf
@@ -93,8 +93,8 @@
                                                         <div class="w-100"></div>
                                                         <div class="col">
                                                                 <div class="card shadow mb-4">
-                                                                    <div class="card-header py-3">
-                                                                    <h6 class="m-0 font-weight-bold text-success">Kontrak</h6>
+                                                                    <div class="card-header py-3 bg-success">
+                                                                    <h6 class="m-0 font-weight-bold text-default">Kontrak</h6>
                                                                     </div>
                                                                     <div class="card-body">
                                                                         sdfsdfsdf
@@ -103,8 +103,8 @@
                                                         </div>
                                                         <div class="col">
                                                                 <div class="card shadow mb-4">
-                                                                    <div class="card-header py-3">
-                                                                    <h6 class="m-0 font-weight-bold text-success"> Description </h6>
+                                                                    <div class="card-header py-3 bg-success">
+                                                                    <h6 class="m-0 font-weight-bold text-default"> Description </h6>
                                                                     </div>
                                                                     <div class="card-body">
                                                                         sdfsdfsdf
@@ -119,8 +119,8 @@
 
                                 <div class="col-8 px-1">
                                     <div class="card shadow mb-4">
-                                                <div class="card-header py-3">
-                                                    <h6 class="m-0 font-weight-bold text-primary">Data Terbaru</h6>
+                                                <div class="card-header py-3 bg-success">
+                                                    <h6 class="m-0 font-weight-bold text-default">Data Terbaru</h6>
                                                 </div>
                                                 <div class="card-body">
                                 
@@ -129,8 +129,8 @@
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                                 <div class="card shadow mb-4">
-                                                                    <div class="card-header py-3">
-                                                                    <h6 class="m-0 font-weight-bold text-success">Kontrak Tender</h6>
+                                                                    <div class="card-header py-3 bg-danger">
+                                                                    <h6 class="m-0 font-weight-bold text-default">Kontrak Tender</h6>
                                                                     </div>
                                                                     <div class="card-body">
                                                                         sdfsdfsdf
@@ -140,8 +140,8 @@
 
                                                         <div class="col-md-6">
                                                             <div class="card shadow mb-4">
-                                                                <div class="card-header py-3">
-                                                                    <h6 class="m-0 font-weight-bold text-success">Kontrak Non Tender</h6>
+                                                                <div class="card-header py-3 bg-primary">
+                                                                    <h6 class="m-0 font-weight-bold text-default">Kontrak Non Tender</h6>
                                                                 </div>
                                                                 <div class="card-body">
                                                                     dfgdfgdfg
@@ -153,8 +153,8 @@
                                                     <div class="row">
                                                         <div class="col-md-4">
                                                         <div class="card shadow mb-4">
-                                                            <div class="card-header py-3">
-                                                                <h6 class="m-0 font-weight-bold text-success">Kontrak Berjalan</h6>
+                                                            <div class="card-header py-3 bg-success">
+                                                                <h6 class="m-0 font-weight-bold text-default">Kontrak Berjalan</h6>
                                                             </div>
                                                             <div class="card-body">
                                                                 dfgdfgdfg
@@ -164,8 +164,8 @@
 
                                                         <div class="col-md-4">
                                                         <div class="card shadow mb-4">
-                                                            <div class="card-header py-3">
-                                                                <h6 class="m-0 font-weight-bold text-success">Kontrak Selesai</h6>
+                                                            <div class="card-header py-3 bg-success">
+                                                                <h6 class="m-0 font-weight-bold text-default">Kontrak Selesai</h6>
                                                             </div>
                                                             <div class="card-body">
                                                                 dfgdfgdfg
@@ -175,8 +175,8 @@
 
                                                         <div class="col-md-4">
                                                         <div class="card shadow mb-4">
-                                                            <div class="card-header py-3">
-                                                                <h6 class="m-0 font-weight-bold text-success">Kontrak Terbayar</h6>
+                                                            <div class="card-header py-3 bg-success">
+                                                                <h6 class="m-0 font-weight-bold text-default">Kontrak Terbayar</h6>
                                                             </div>
                                                             <div class="card-body">
                                                                 dfgdfgdfg
