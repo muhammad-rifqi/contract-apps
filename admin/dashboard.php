@@ -1,3 +1,6 @@
+<?php 
+error_reporting(0);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +12,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Dashboard</title>
+  <title>Kabupaten Musi Rawas Utara - Dashboard</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,6 +22,8 @@
 
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+  <link href="admin/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
 
@@ -186,9 +191,7 @@
                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
           </div>
 
-
-            <?php include "include/total_data.php"; ?>
-
+            <?php include "content.php"; ?>
 
         </div>
         <!-- /.container-fluid -->
@@ -253,6 +256,13 @@
   <!-- Page level custom scripts -->
   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script>
+
+
+  <script src="admin/vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="admin/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+  <script src="admin/js/demo/datatables-demo.js"></script>
+
+
 
 </body>
 

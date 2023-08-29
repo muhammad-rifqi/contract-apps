@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-    <meta name="description" content="Aplikasi eKontrak Kabupaten Sleman">
+    <meta name="description" content="Aplikasi eKontrak Kabupaten Musi Rawas Utara">
     <meta name="author" content="Integra Inovasi Indonesia">
     <meta name="keyword" content="Bootstrap,Admin,Template,jQuery,CSS,HTML,RWD,Dashboard,Vue">
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <title>eKontrak - Kabupaten Sleman</title>
+    <link rel="shortcut icon" href="img/icon.ico">
+    <title>eKontrak - Kabupaten Musi Rawas Utara</title>
     <link href="css/public-app.css" rel="stylesheet">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
@@ -28,9 +28,9 @@
                 <div class="px-2"> <img class="d-none d-sm-block mr-2" src="img/logo-kab.png" width="40" height="auto">
                     <img class="d-block d-sm-none mr-2" src="img/logo-kab.png" width="30" height="auto"> </div>
                 <div class="text-white">
-                    <h4 class="d-block d-sm-none title mb-0 mt-1">eKontrak Sleman</h4>
+                    <h4 class="d-block d-sm-none title mb-0 mt-1">eKontrak Musi Rawas Utara</h4>
                     <h4 class="d-none d-sm-block title mb-0">eKontrak</h4>
-                    <div class="d-none d-sm-block" style="letter-spacing: 3px;">Kabupaten Sleman</div>
+                    <div class="d-none d-sm-block" style="letter-spacing: 3px;">Kabupaten Musi Rawas Utara</div>
                 </div>
             </div> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> <span
