@@ -7,8 +7,8 @@
         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
           <h6 class="collapse-header">Data Tender:</h6>
-            <a class="collapse-item" href="#">Tender</a>
-            <a class="collapse-item" href="#">Non Tender</a>
+            <a class="collapse-item" href="?menu=tender">Tender</a>
+            <a class="collapse-item" href="?menu=non_tender">Non Tender</a>
             <a class="collapse-item" href="#">Pencatatan Non Tender</a>
             <a class="collapse-item" href="#">Pencatatan Swakelola</a>
             <a class="collapse-item" href="#">Pengadaan Darurat</a>
