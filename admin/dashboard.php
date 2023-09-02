@@ -1,5 +1,10 @@
 <?php 
 error_reporting(0);
+session_start();
+include "config.php";
+if(empty($_SESSION['username'])){
+    echo "<h1>Session Expired!</h1>";
+}else{ 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +28,7 @@ error_reporting(0);
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
-  <link href="admin/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
 
@@ -74,7 +79,7 @@ error_reporting(0);
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-white small">Valerie Luna</span>
+                <span class="mr-2 d-none d-lg-inline text-white small"><?php echo $_SESSION['username']; ?></span>
                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
               </a>
               <!-- Dropdown - User Information -->
@@ -165,20 +170,14 @@ error_reporting(0);
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
 
-  <!-- Page level plugins -->
-  <script src="vendor/chart.js/Chart.min.js"></script>
 
-  <!-- Page level custom scripts -->
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
-
-
-  <script src="admin/vendor/datatables/jquery.dataTables.min.js"></script>
-  <script src="admin/vendor/datatables/dataTables.bootstrap4.min.js"></script>
-  <script src="admin/js/demo/datatables-demo.js"></script>
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+  <script src="js/demo/datatables-demo.js"></script>
 
 
 
 </body>
 
 </html>
+<?php } ?>

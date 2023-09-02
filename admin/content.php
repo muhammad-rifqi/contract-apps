@@ -8,6 +8,10 @@ if($_GET['menu'] == 'tender'){
     include "include/tender.php" ;
 }
 
+if($_GET['menu'] == 'tambah_tender'){
+    include "include/tambah_tender.php" ;
+}
+
 if($_GET['menu'] == 'non_tender'){
     include "include/non_tender.php" ;
 }

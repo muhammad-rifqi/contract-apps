@@ -17,38 +17,8 @@
 
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   
-<script>
-	
-	function login(){
-			var hr = new XMLHttpRequest();
-			var url = "cek_login.php";
-			var name = document.getElementById("username").value;
-			var email = document.getElementById("password").value;;
-			var vars = "username="+name+"&password="+email;
-			hr.open("POST", url, true);
-			hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-			hr.onreadystatechange = function() {
-				if(hr.readyState == 4 && hr.status == 200) {
-					var return_data = hr.responseText;
-						if(return_data == "success"){
-							window.location="dashboard.php";
-						}else{
-						swal({
-						  title: "Login Failed",
-						  text: return_data,
-						  icon: "error",
-						}).then(function() {
-							window.location = "index.php";
-						});
-						}
-				}
-			}
-			hr.send(vars); 
-			}
-			
-		</script>
 		
 
 </head>
@@ -71,24 +41,18 @@
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                   </div>
-                  <form class="user">
+                  <div class="user">
                     <div class="form-group">
-                      <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
+                      <input type="text" class="form-control form-control-user" id="username" aria-describedby="emailHelp" placeholder="Enter Username...">
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                      <input type="password" class="form-control form-control-user" id="password" placeholder="Password">
                     </div>
-                    <div class="form-group">
-                      <div class="custom-control custom-checkbox small">
-                        <input type="checkbox" class="custom-control-input" id="customCheck">
-                        <label class="custom-control-label" for="customCheck">Remember Me</label>
-                      </div>
-                    </div>
-                    <a href="index.html" class="btn btn-primary btn-user btn-block">
+                    <button onclick="login()" class="btn btn-primary btn-user btn-block">
                       Login
-                    </a>
+                    </button>
                     <hr>
-                  </form>
+                  </div>
                 </div>
               </div>
             </div>
@@ -110,6 +74,48 @@
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
+
+  <script>
+	
+	function login(){
+			var hr = new XMLHttpRequest();
+			var url = "cek_login.php";
+			var name = document.getElementById("username").value;
+			var password = document.getElementById("password").value;
+      if(name == "" || password == ""){
+        swal({
+                title: "Login Failed",
+                text: "Username Or Password Cannot Empty",
+                icon: "error",
+              }).then(function() {
+                return false;
+              });
+       
+      }else{      
+        var vars = "username="+name+"&password="+password;
+        hr.open("POST", url, true);
+        hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        hr.onreadystatechange = function() {
+          if(hr.readyState == 4 && hr.status == 200) {
+            var return_data = hr.responseText;
+              if(return_data == "success"){
+                window.location="dashboard.php";
+              }else{
+              swal({
+                title: "Login Failed",
+                text: return_data,
+                icon: "error",
+              }).then(function() {
+                window.location = "index.php";
+              });
+              }
+          }
+        }
+        hr.send(vars); 
+        }
+      }
+			
+		</script>
 
 </body>
 
