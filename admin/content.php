@@ -20,6 +20,10 @@ if($_GET['menu'] == 'sppbj'){
     include "include/sppbj.php" ;
 }
 
+if($_GET['menu'] == 'tambah_sppbj'){
+    include "include/tambah_sppbj.php" ;
+}
+
 if($_GET['menu'] == 'non_tender'){
     include "include/non_tender.php" ;
 }
