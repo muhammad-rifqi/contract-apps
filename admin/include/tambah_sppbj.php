@@ -2,7 +2,7 @@
     <h4> Tambah SPPBJ </h4>
     <hr>
     <form method="POST" action="./aksi.php?act=insert_tender">
-    <div class="table-responsive">
+        <div class="table-responsive">
             <h4 class="bg-primary text-light" style="padding: 10px">Informasi Paket</h4><hr>
             <table width="100%" border="1" cellspacing="0" cellpadding="4" class="table table-bordered">
                     <tr>
@@ -135,6 +135,12 @@
 
                 <!-- // ////////////////////// -->
 
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                    <button type="submit" class="btn btn-primary" onclick="return confirm('Apakah Anda Yakin Untuk menyimpan Data Ini ???')">Simpan</button> <a class="btn btn-primary" href="include/cetak_sppbj.php" target="_blank" >Cetak</a>
+            </div>
         </div>
     </form>
     </div>
