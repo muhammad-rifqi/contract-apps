@@ -1,15 +1,17 @@
+<?php $data = mysqli_fetch_array(mysqli_query($koneksi,"select * from tender where id = '".$_GET['id']."'")); ?>
 <div class="container-fluid">
-    <h4> Tambah Tender </h4>
+    <h4> Edit Tender </h4>
     <hr>
-    <form method="POST" action="./aksi.php?act=insert_tender">
+    <form method="POST" action="./aksi.php?act=update_tender">
+        <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
         <div class="row">
             <div class="col">
             <label for="validationTooltip01">Kode Tender</label>
-            <input type="text" name="kode_tender" class="form-control" placeholder="Kode Tender">
+            <input type="text" name="kode_tender" class="form-control" placeholder="Kode Tender" value="<?php echo $data['kode_tender']?>" disabled>
             </div>
             <div class="col">
             <label for="validationTooltip01">Nama Tender</label>
-            <input type="text" name="nama_tender" class="form-control" placeholder="Nama Tender">
+            <input type="text" name="nama_tender" class="form-control" placeholder="Nama Tender" value="<?php echo $data['nama_tender']?>" disabled>
             </div>
         </div>
         <br>
@@ -24,7 +26,7 @@
             </div>
             <div class="col">
             <label for="validationTooltip01">Tanggal Input</label>
-            <input type="text" name="tanggal_input" class="form-control" placeholder="Tanggal Input" value="<?php echo date("Y-m-d")?>">
+            <input type="text" name="tanggal_input" class="form-control" placeholder="Tanggal Input" value="<?php echo $data['created_at']?>" disabled>
             </div>
         </div>
         <br>

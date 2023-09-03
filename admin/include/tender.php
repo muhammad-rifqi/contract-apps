@@ -37,9 +37,9 @@
                                 ?>
                                 <tr>
                                     <td><?php echo $data['kode_tender']; ?></td>
-                                    <td><?php echo $data['nama_tender']; ?></td>
+                                    <td><a href="?menu=sppbj"><?php echo $data['nama_tender']; ?></a></td>
                                     <td><?php echo $data['tahap_tender']; ?></td>
-                                    <td><a href="?menu=sppbj" class="btn btn-warning">EKontrak</a> | <a href="aksi.php?act=delete_tender&id=<?php echo $data['id'];?>" class="btn btn-danger">Batal</a></td>
+                                    <td><a href="?menu=edit_tender&id=<?php echo $data['id']; ?>" class="btn btn-warning">EKontrak</a> | <a href="aksi.php?act=delete_tender&id=<?php echo $data['id'];?>" onclick="return confirm('Are You Sure ??')" class="btn btn-danger">Batal</a></td>
                                 </tr>
                                 <?php } ?>
                                 </tbody>
