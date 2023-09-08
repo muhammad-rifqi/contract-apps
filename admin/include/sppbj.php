@@ -22,7 +22,8 @@
                                     <th>Surat Perjanjian</th>
                                     <th>Harga Kontrak</th>
                                     <th>SSKK</th>
-                                    <th>SPMK/SPP Pembayaran</th>
+                                    <th>SPMK/SPP </th>
+                                    <th>Pembayaran</th>
                                     <th>Status</th>
                                     <th>Penilaian</th>
                                 </tr>
@@ -35,7 +36,8 @@
                                     <th>Surat Perjanjian</th>
                                     <th>Harga Kontrak</th>
                                     <th>SSKK</th>
-                                    <th>SPMK/SPP Pembayaran</th>
+                                    <th>SPMK/SPP </th>
+                                    <th>Pembayaran</th>
                                     <th>Status</th>
                                     <th>Penilaian</th>
                                 </tr>
@@ -44,16 +46,18 @@
                                 <?php 
                                 $sql = mysqli_query($koneksi,"select * from sppbj");
                                 while($data = mysqli_fetch_array($sql)){
+                                $peny = explode(",",$data['penyedia']);
                                 ?>
                                 <tr>
                                     <td><?php echo $data['no_sppbj']; ?></td>
-                                    <td><?php echo $data['tanggal']; ?></a></td>
-                                    <td><?php echo $data['penyedia']; ?></td>
-                                    <td><?php echo $data['surat_perjanjian']; ?></td>
-                                    <td><?php echo $data['harga_kontrak']; ?></td>
-                                    <td><?php echo $data['sskk']; ?></td>
-                                    <td><?php echo $data['pembayaran']; ?></td>
-                                    <td><?php echo $data['status']; ?></td>
+                                    <td><?php echo $data['tanggal_sppbj']; ?></a></td>
+                                    <td><?php echo $peny[2]; ?></td>
+                                    <td><a href="#" class="btn btn-secondary">Kontrak</a></td>
+                                    <td><?php echo $peny[1]; ?></td>
+                                    <td><a href="#" class="btn btn-secondary">SSKK</a></td>
+                                    <td><a href="#" class="btn btn-secondary">SPMK/SPP</a></td>
+                                    <td><a href="#" class="btn btn-secondary">Pembayaran</a></td>
+                                    <td><td><a href="#" class="btn btn-secondary">Pilih</a></td></td>
                                     <td><?php echo $data['penilaian']; ?></td>
                                 </tr>
                                 <?php } ?>

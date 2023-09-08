@@ -111,7 +111,7 @@
                                             while($data2 = mysqli_fetch_assoc($sql2)){
                                     ?>
                                         <tr>
-                                            <td> <input type="radio" name="penyedia" value="<?php echo $data2['id'];?>"> </td>
+                                            <td> <input type="radio" name="penyedia" value="<?php echo $data2['id'].','.$data2['harga_final'].','.$data2['pemenang']; ?>"> </td>
                                             <td> <?php echo $data2['pemenang']; ?></td>
                                             <td> <?php echo $data2['npwp']; ?> </td>
                                             <td> <?php echo $data2['email']; ?> </td>
