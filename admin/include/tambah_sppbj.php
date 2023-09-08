@@ -2,7 +2,8 @@
 <div class="container-fluid">
     <h4> Tambah SPPBJ </h4>
     <hr>
-    <form method="POST" action="./aksi.php?act=insert_tender">
+    <form method="POST" action="./aksi.php?act=insert_sppbj">
+        <input type='hidden' name='id_tender' value='<?php echo $_GET['id']; ?>'>
         <div class="table-responsive">
             <h4 class="bg-primary text-light" style="padding: 10px">Informasi Paket</h4><hr>
             <table width="100%" border="1" cellspacing="0" cellpadding="4" class="table table-bordered">
