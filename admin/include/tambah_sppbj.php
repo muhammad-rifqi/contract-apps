@@ -23,10 +23,14 @@
                             <td width="20%">Sumber Dana </td>
                             <td width="20%">Detail</td>
                         </tr>
+                        <?php 
+                            $sql1 = mysqli_query($koneksi,"select * from rup where kode_tender = '".$_GET['id']."'"); 
+                            $data1 = mysqli_fetch_assoc($sql1)
+                        ?>
                         <tr>
-                            <td> <input type="text" id="kode_rup" class="form-control"> </td>
-                            <td> <input type="text" id="nama_paket" class="form-control"> </td>
-                            <td> <input type="text" id="sumber_dana" class="form-control"> </td>
+                            <td> <?php echo $data1['kode_rup'];?> </td>
+                            <td> <?php echo $data1['nama_paket'];?> </td>
+                            <td> <?php echo $data1['sumber_dana'];?> </td>
                             <td> <a href="?menu=detail"> Detail </a> </td>
                         </tr>
                         </table></td>
@@ -119,7 +123,7 @@
                             </tr>
                             <tr>
                                 <td>Tembusan </td>
-                                <td>&nbsp;</td>
+                                <td> <input type="text" class="form-control" id="tembusan" placeholder=""> </td>
                             </tr>
                     </table>
 
