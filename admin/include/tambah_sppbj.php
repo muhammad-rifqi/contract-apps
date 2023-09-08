@@ -2,18 +2,18 @@
 <div class="container-fluid">
     <h4> Tambah SPPBJ </h4>
     <hr>
-    <form method="POST" action="./aksi.php?act=insert_sppbj">
+    <form method="POST" action="./aksi.php?act=insert_sppbj" enctype="multipart/form-data">
         <input type='hidden' name='id_tender' value='<?php echo $_GET['id']; ?>'>
         <div class="table-responsive">
             <h4 class="bg-primary text-light" style="padding: 10px">Informasi Paket</h4><hr>
             <table width="100%" border="1" cellspacing="0" cellpadding="4" class="table table-bordered">
                     <tr>
                         <td width="219">Kode Tender </td>
-                        <td width="495"><input type="text" id="kode_tender" class="form-control"></td>
+                        <td width="495"><input type="text" name="kode_tender" class="form-control"></td>
                     </tr>
                     <tr>
                         <td>Nama Tender </td>
-                        <td><input type="text" id="nama_tender" class="form-control"></td>
+                        <td><input type="text" name="nama_tender" class="form-control"></td>
                     </tr>
                     <tr>
                         <td>Rencana Pengadaan Umum </td>
@@ -28,6 +28,7 @@
                             $sql1 = mysqli_query($koneksi,"select * from rup where kode_tender = '".$_GET['id']."'"); 
                             $data1 = mysqli_fetch_assoc($sql1)
                         ?>
+                        <input type="hidden" name="rup" value="<?php echo $data1['kode_rup'];?>">
                         <tr>
                             <td> <?php echo $data1['kode_rup'];?> </td>
                             <td> <?php echo $data1['nama_paket'];?> </td>
@@ -38,7 +39,7 @@
                     </tr>
                     <tr>
                         <td>Harga Penawaran </td>
-                        <td> <input type="text" id="harga_penawaran" class="form-control"> </td>
+                        <td> <input type="text" name="harga_penawaran" class="form-control"> </td>
                     </tr>
             </table>
 
@@ -48,19 +49,19 @@
                 <table width="100%" border="1" cellspacing="0" cellpadding="4" class="table table-bordered">
                     <tr>
                         <td width="219">NO SPPBJ </td>
-                        <td width="495"><input type="text" class="form-control" id="no_sppbj" placeholder=""></td>
+                        <td width="495"><input type="text" class="form-control" name="no_sppbj" placeholder=""></td>
                     </tr>
                     <tr>
                         <td>Lampiran Sppbj </td>
-                        <td><input type="text" class="form-control" id="lampiran_sppbj" placeholder=""></td>
+                        <td><input type="text" class="form-control" name="lampiran_sppbj" placeholder=""></td>
                     </tr>
                     <tr>
                         <td>Tanggal SPPBJ </td>
-                        <td> <input type="date" class="form-control" id="tanggal_sppbj" placeholder=""> </td>
+                        <td> <input type="date" class="form-control" name="tanggal_sppbj" placeholder=""> </td>
                     </tr>
                     <tr>
                         <td> Kota SPPBJ </td>
-                        <td><input type="text" class="form-control" id="kota_sppbj" placeholder=""> </td>
+                        <td><input type="text" class="form-control" name="kota_sppbj" placeholder=""> </td>
                     </tr>
                 </table>
 
@@ -69,23 +70,23 @@
                 <table width="100%" border="1" cellspacing="0" cellpadding="4" class="table table-bordered">
                     <tr>
                         <td width="219">Nama PPK </td>
-                        <td width="495"></td>
+                        <td width="495"> <input type="text" name="nama_ppk" class="form-control"> </td>
                     </tr>
                     <tr>
                         <td>NIP PPK </td>
-                        <td> <input type="text" id="nip_ppk" class="form-control"> </td>
+                        <td> <input type="text" name="nip_ppk" class="form-control"> </td>
                     </tr>
                     <tr>
                         <td>Jabatan PPK </td>
-                        <td> <input type="text" class="form-control" placeholder="" id="jabatan_ppk"> </td>
+                        <td> <input type="text" class="form-control" placeholder="" name="jabatan_ppk"> </td>
                     </tr>
                     <tr>
                         <td> Nama Satuan Kerja </td>
-                        <td> <input type="text" id="harga_penawaran" class="form-control" id="nama_satuan_kerja"> </td>
+                        <td> <input type="text"  class="form-control" name="nama_satuan_kerja"> </td>
                     </tr>
                     <tr>
                         <td> Alamat Satuan Kerja </td>
-                        <td> <input type="text" id="harga_penawaran" class="form-control" id="alamat_satuan_kerja"> </td>
+                        <td> <input type="text" class="form-control" name="alamat_satuan_kerja"> </td>
                     </tr>
                 </table>
 
@@ -110,7 +111,7 @@
                                             while($data2 = mysqli_fetch_assoc($sql2)){
                                     ?>
                                         <tr>
-                                            <td> # </td>
+                                            <td> <input type="radio" name="penyedia" value="<?php echo $data2['id'];?>"> </td>
                                             <td> <?php echo $data2['pemenang']; ?></td>
                                             <td> <?php echo $data2['npwp']; ?> </td>
                                             <td> <?php echo $data2['email']; ?> </td>
@@ -124,7 +125,7 @@
                             </tr>
                             <tr>
                                 <td>Tembusan </td>
-                                <td> <input type="text" class="form-control" id="tembusan" placeholder=""> </td>
+                                <td> <input type="text" class="form-control" name="tembusan" placeholder=""> </td>
                             </tr>
                     </table>
 
@@ -134,7 +135,7 @@
                         <table width="100%" border="1" cellspacing="0" cellpadding="4" class="table table-bordered">
                             <tr>
                                 <td width="219">Dokumen Berita Acara </td>
-                                <td width="495"> <input type="file" name="dokumen_berita"> </td>
+                                <td width="495"> <input type="file" name="dokumen_berita_acara"> </td>
                             </tr>
                         </table>
 
