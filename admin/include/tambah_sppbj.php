@@ -155,7 +155,7 @@
         <hr>
         <div class="row">
             <div class="col">
-                    <button type="submit" class="btn btn-primary" onclick="return confirm('Apakah Anda Yakin Untuk menyimpan Data Ini ???')">Simpan</button> <a class="btn btn-primary" href="include/cetak_sppbj.php" target="_blank" >Cetak</a>
+                    <button type="submit" class="btn btn-primary" onclick="return confirm('Apakah Anda Yakin Untuk menyimpan Data Ini ???')">Simpan</button>
             </div>
         </div>
     </form>

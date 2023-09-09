@@ -23152,7 +23152,7 @@ hr.transparent {
     text-shadow: 0 0 7px #333
 }
 
-@media screen and (min-width:0 \0) {
+@media screen and (min-width:0) {
 
     .trumbowyg-box-blur .trumbowyg-editor *,
     .trumbowyg-box-blur .trumbowyg-editor::before {
@@ -23743,7 +23743,7 @@ body.trumbowyg-body-fullscreen {
     text-shadow: 0 0 7px #ccc
 }
 
-@media screen and (min-width:0 \0) {
+@media screen and (min-width:0) {
 
     .trumbowyg-dark .trumbowyg-box.trumbowyg-box-blur .trumbowyg-editor *,
     .trumbowyg-dark .trumbowyg-box.trumbowyg-box-blur .trumbowyg-editor::before {
@@ -26185,7 +26185,7 @@ input#c {
     background: #00606b;
     background: linear-gradient(360deg, #00606b 6%, #1fb1aa 87%);
     background: -moz-linear-gradient(360deg, #00606b 6%, #1fb1aa 87%);
-    background: -webkit-linear-gradient(360deg, #00606b 6%, #1fb1aa 87%)
+    background: -webkit-linear-gradient(360deg, #0000FF 6%, #FFA500 87%)
 }
 
 #public-5 .social-box .social-box-sm {

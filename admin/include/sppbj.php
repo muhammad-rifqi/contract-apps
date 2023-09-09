@@ -26,6 +26,7 @@
                                     <th>Pembayaran</th>
                                     <th>Status</th>
                                     <th>Penilaian</th>
+                                    <th> Aksi </th>
                                 </tr>
                                 </thead>
                                 <tfoot>
@@ -40,6 +41,7 @@
                                     <th>Pembayaran</th>
                                     <th>Status</th>
                                     <th>Penilaian</th>
+                                    <th> Aksi </th>
                                 </tr>
                                 </tfoot>
                                 <tbody>
@@ -57,8 +59,9 @@
                                     <td><a href="#" class="btn btn-secondary">SSKK</a></td>
                                     <td><a href="#" class="btn btn-secondary">SPMK/SPP</a></td>
                                     <td><a href="#" class="btn btn-secondary">Pembayaran</a></td>
-                                    <td><td><a href="#" class="btn btn-secondary">Pilih</a></td></td>
+                                    <td><a href="#" class="btn btn-secondary">Pilih</a></td>
                                     <td><?php echo $data['penilaian']; ?></td>
+                                    <td> <a class="btn btn-primary" href="include/cetak_sppbj.php?id=<?php echo $data['id']; ?>" target="_blank" >Cetak</a> </td>
                                 </tr>
                                 <?php } ?>
                                 </tbody>

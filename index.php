@@ -9,7 +9,7 @@
     <meta name="author" content="Integra Inovasi Indonesia">
     <meta name="keyword" content="Bootstrap,Admin,Template,jQuery,CSS,HTML,RWD,Dashboard,Vue">
     <link rel="shortcut icon" href="img/icon.ico">
-    <title>eKontrak - Kabupaten Musi Rawas Utara</title>
+    <title>Dinas Pekerjaan Umum - Kabupaten Musi Rawas Utara</title>
     <link href="css/public-app.css" rel="stylesheet">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
@@ -29,7 +29,7 @@
                     <img class="d-block d-sm-none mr-2" src="img/logo-kab.png" width="30" height="auto"> </div>
                 <div class="text-white">
                     <h4 class="d-block d-sm-none title mb-0 mt-1">eKontrak Musi Rawas Utara</h4>
-                    <h4 class="d-none d-sm-block title mb-0">eKontrak</h4>
+                    <h4 class="d-none d-sm-block title mb-0">Dinas Pekerjaan Umum</h4>
                     <div class="d-none d-sm-block" style="letter-spacing: 3px;">Kabupaten Musi Rawas Utara</div>
                 </div>
             </div> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -48,9 +48,9 @@
                 </div>
                 <ul class="navbar-nav">
                     <li class="nav-item font-weight-bold"> <a
-                            class="nav-link mr-3"href="#"> Sample Name <span
+                            class="nav-link mr-3"href="#" style="color:white"> Home <span
                                 class="sr-only">(current)</span></a> </li>
-                    <li class="nav-item font-weight-bold"> <a class="nav-link" href="admin">Login<span class="sr-only">(current)</span></a> </li>
+                    <li class="nav-item font-weight-bold"> <a class="nav-link" href="admin" style="color:white">Login<span class="sr-only">(current)</span></a> </li>
                 </ul>
             </div>
         </nav>
@@ -61,79 +61,36 @@
                 <div class="container container-bigger bg-white">
         
                         <div class="row">
-                                <div class="col-4 px-1">
-                                    <div class="card shadow mb-4">
-                                            <div class="card-header py-3 bg-success">
-                                                <h6 class="m-0 font-weight-bold text-default">Data Terbaru</h6>
-                                            </div>
-                                                <div class="card-body">
-                                                    
-                                                <div class="container-bigger bg-white">
-                                                    <div class="row">
-                                                        <div class="col">
-                                                                <div class="card shadow mb-4">
-                                                                    <div class="card-header py-3 bg-success">
-                                                                    <h6 class="m-0 font-weight-bold text-default">Penyedia</h6>
-                                                                    </div>
-                                                                    <div class="card-body">
-                                                                        sdfsdfsdf
-                                                                    </div>
-                                                                </div>
-                                                        </div>
-                                                        <div class="col">
-                                                                <div class="card shadow mb-4">
-                                                                    <div class="card-header py-3 bg-success">
-                                                                    <h6 class="m-0 font-weight-bold text-default">Charts</h6>
-                                                                    </div>
-                                                                    <div class="card-body">
-                                                                        sdfsdfsdf
-                                                                    </div>
-                                                                </div>
-                                                        </div>
-                                                        <div class="w-100"></div>
-                                                        <div class="col">
-                                                                <div class="card shadow mb-4">
-                                                                    <div class="card-header py-3 bg-success">
-                                                                    <h6 class="m-0 font-weight-bold text-default">Kontrak</h6>
-                                                                    </div>
-                                                                    <div class="card-body">
-                                                                        sdfsdfsdf
-                                                                    </div>
-                                                                </div>
-                                                        </div>
-                                                        <div class="col">
-                                                                <div class="card shadow mb-4">
-                                                                    <div class="card-header py-3 bg-success">
-                                                                    <h6 class="m-0 font-weight-bold text-default"> Description </h6>
-                                                                    </div>
-                                                                    <div class="card-body">
-                                                                        sdfsdfsdf
-                                                                    </div>
-                                                                </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                </div>
+                            <h3>SI Pendongkrak</h3><br><br>
+                                <div class="col-12 px-1">
+                                    <div class="row">
+                                        <div class="col-2 px-1 text-center"> <label> Instansi : </label></div>
+                                        <div class="col-8 px-1 ">
+                                        <select class="form-control">
+                                                    <option value="null">Pilih Instansi </option>
+                                            </select>
+                                        </div>
+                                        <div class="col-2 px-1 text-center"> <button class="btn-primary"> Refresh </button></div>
                                     </div>
-                                </div>
-
-                                <div class="col-8 px-1">
+                                    <br>
+                                </div>    
+                               
+                                <div class="col-12 px-1">
                                     <div class="card shadow mb-4">
-                                                <div class="card-header py-3 bg-success">
+                                                <div class="card-header py-3 bg-default">
                                                     <h6 class="m-0 font-weight-bold text-default">Data Terbaru</h6>
                                                 </div>
                                                 <div class="card-body">
-                                
-                                                
                                                 <div class="container-bigger bg-white">
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                                 <div class="card shadow mb-4">
-                                                                    <div class="card-header py-3 bg-danger">
+                                                                    <div class="card-header py-3 bg-warning">
                                                                     <h6 class="m-0 font-weight-bold text-default">Kontrak Tender</h6>
                                                                     </div>
                                                                     <div class="card-body">
-                                                                        sdfsdfsdf
+                                                                    <p>Nilai Kontrak : Rp.50.000.000</p>
+                                                                    <p>Paket : </p>
                                                                     </div>
                                                                 </div>
                                                         </div>
@@ -144,7 +101,8 @@
                                                                     <h6 class="m-0 font-weight-bold text-default">Kontrak Non Tender</h6>
                                                                 </div>
                                                                 <div class="card-body">
-                                                                    dfgdfgdfg
+                                                                    <p>Nilai Kontrak : Rp.50.000.000</p>
+                                                                    <p>Paket : </p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -153,33 +111,36 @@
                                                     <div class="row">
                                                         <div class="col-md-4">
                                                         <div class="card shadow mb-4">
-                                                            <div class="card-header py-3 bg-success">
+                                                            <div class="card-header py-3 bg-warning">
                                                                 <h6 class="m-0 font-weight-bold text-default">Kontrak Berjalan</h6>
                                                             </div>
                                                             <div class="card-body">
-                                                                dfgdfgdfg
+                                                                    <p>Nilai Kontrak : Rp.50.000.000</p>
+                                                                    <p>Paket : </p>
                                                             </div>
                                                         </div>
                                                         </div>
  
                                                         <div class="col-md-4">
                                                         <div class="card shadow mb-4">
-                                                            <div class="card-header py-3 bg-success">
+                                                            <div class="card-header py-3 bg-info">
                                                                 <h6 class="m-0 font-weight-bold text-default">Kontrak Selesai</h6>
                                                             </div>
                                                             <div class="card-body">
-                                                                dfgdfgdfg
+                                                                    <p>Nilai Kontrak : Rp.50.000.000</p>
+                                                                    <p>Paket : </p>
                                                             </div>
                                                         </div>
                                                         </div>
 
-                                                        <div class="col-md-4">
-                                                        <div class="card shadow mb-4">
-                                                            <div class="card-header py-3 bg-success">
+                                                        <div class="col-md-4 ">
+                                                        <div class="card shadow mb-4 ">
+                                                            <div class="card-header py-3 bg-info">
                                                                 <h6 class="m-0 font-weight-bold text-default">Kontrak Terbayar</h6>
                                                             </div>
                                                             <div class="card-body">
-                                                                dfgdfgdfg
+                                                                    <p>Nilai Kontrak : Rp.50.000.000</p>
+                                                                    <p>Paket : </p>
                                                             </div>
                                                         </div>
                                                         </div>
@@ -193,6 +154,7 @@
 
                         </div>
                         <hr>
+                        <h3>Persentase</h3><br>
                         <div class="row">
                             <div class="col-6 px-0">
                                 <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
@@ -284,29 +246,13 @@
                 <div class="row">
                     <div class="col-12 px-0">
                         <h6 class="bg-dark text-center text-white py-4 mb-0"
-                            style="text-transform: uppercase;letter-spacing: 3px"> Copyright 2021 Pemerintah Kabupaten
-                            Sleman </h6>
+                            style="text-transform: uppercase;letter-spacing: 3px"> Copyright 2021 Kabupaten Musi Rawas Utara </h6>
                     </div>
                 </div>
             </div>
         </div>
         
     </div>
-    <div class="modal fade" id="dm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-danger" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title"> <i class="fa fa-warning"></i> LOGIN GAGAL</h4> <button type="button"
-                        class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body"> </div>
-                <div class="modal-footer login"> <button type="button" class="btn btn-primary"
-                        data-dismiss="modal">Close</button> </div>
-            </div>
-        </div>
-    </div>
-    
 </body>
     <script src="admin/js/sb-admin-2.min.js"></script>
   <!-- Page level plugins -->
