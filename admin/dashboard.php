@@ -45,7 +45,7 @@ if(empty($_SESSION['username'])){
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">SI <sup> Pendongkrak</sup></div>
+        <div class="sidebar-brand-text mx-3">SI <br> <sup> Pendongkrak</sup></div>
       </a>
 
       <!-- Divider -->
