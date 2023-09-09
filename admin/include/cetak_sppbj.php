@@ -10,11 +10,10 @@
 </script>
 
 <?php
+include "../config.php";
 $sql = mysqli_query($koneksi,"select * from sppbj where no_sppbj = '".$_GET['id']."'");
 $data = mysqli_fetch_array($sql);
-print_r($data);
 $peny = explode(",",$data['penyedia']);
-print_r($peny);
 ?>
 
 <!DOCTYPE html>
