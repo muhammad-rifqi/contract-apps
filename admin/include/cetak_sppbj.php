@@ -9,6 +9,12 @@
     // html2pdf().set(optionArray).from(pdfContent).save();
 </script>
 
+<?php
+$sql = mysqli_query($koneksi,"select * from sppbj where id = '".$_GET['id']."'");
+$data = mysqli_fetch_array($sql);
+$peny = explode(",",$data['penyedia']);
+?>
+
 <!DOCTYPE html>
 
 <head>
@@ -29,7 +35,7 @@
         <tr>
             <td width="190">Nomor</td>
             <td width="415">027/45/LPSE/2023</td>
-            <td width="163">Denpasar 15 Mei 2023 </td>
+            <td width="163">Denpasar <?php echo $data['tanggal_sppbj'];?> </td>
         </tr>
         <tr>
             <td>Lampiran</td>
@@ -39,7 +45,7 @@
         <tr>
             <td>
                 <p>Kpd Yth :</p>
-                <p>Rekanan 11</p>
+                <p><?php echo $peny[2]; ?></p>
                 <p>Di Bangkalan Kab </p>
             </td>
             <td>&nbsp;</td>
