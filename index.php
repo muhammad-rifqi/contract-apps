@@ -156,12 +156,8 @@
                         <hr>
                         <h3>Persentase</h3><br>
                         <div class="row">
-                            <div class="col-6 px-0">
+                            <div class="col-12 px-1">
                                 <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
-                            </div>
-                            <div class="col-6 px-0">
-                                
-                                <canvas id="myChart2" style="width:100%;max-width:600px"></canvas>
                             </div>
                         </div>
                         <hr>
@@ -272,24 +268,8 @@
         "#1e7145"
         ];
 
-        new Chart("myChart", {
-        type: "pie",
-        data: {
-            labels: xValues,
-            datasets: [{
-            backgroundColor: barColors,
-            data: yValues
-            }]
-        },
-        options: {
-            title: {
-            display: true,
-            text: "World Wide Wine Production 2018"
-            }
-        }
-        });
 
-        new Chart("myChart2", {
+        new Chart("myChart", {
         type: "bar",
         data: {
             labels: xValues,
