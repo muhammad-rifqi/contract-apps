@@ -157,7 +157,7 @@
                         <h3>Persentase</h3><br>
                         <div class="row">
                             <div class="col-12 px-1">
-                                <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+                                <canvas id="myChart" style="width:100%;"></canvas>
                             </div>
                         </div>
                         <hr>
