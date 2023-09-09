@@ -10,7 +10,7 @@
 </script>
 
 <?php
-$sql = mysqli_query($koneksi,"select * from sppbj where id = '".$_GET['id']."'");
+$sql = mysqli_query($koneksi,"select * from sppbj where no_sppbj = '".$_GET['id']."'");
 $data = mysqli_fetch_array($sql);
 $peny = explode(",",$data['penyedia']);
 ?>
