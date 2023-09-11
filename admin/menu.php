@@ -1,19 +1,8 @@
  <!-- Nav Item - Dashboard -->
  <li class="nav-item active">
-        <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
-          aria-controls="collapseOne">
+        <a class="nav-link" href="dashboard.php" >
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Beranda</span></a>
-        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-          <h6 class="collapse-header">Data Tender:</h6>
-            <a class="collapse-item" href="?menu=tender">Tender</a>
-            <a class="collapse-item" href="?menu=non_tender">Non Tender</a>
-            <a class="collapse-item" href="#">Pencatatan Non Tender</a>
-            <a class="collapse-item" href="#">Pencatatan Swakelola</a>
-            <a class="collapse-item" href="#">Pengadaan Darurat</a>
-          </div>
-        </div>
       </li>
 
       <!-- Divider -->
@@ -34,24 +23,11 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Data Paket:</h6>
-            <a class="collapse-item" href="#">Sample 1</a>
-            <a class="collapse-item" href="#">Sample 2</a>
-          </div>
-        </div>
-      </li>
-
-      <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true"
-          aria-controls="collapseThree">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Inbox</span>
-        </a>
-        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Data Inbox:</h6>
-            <a class="collapse-item" href="#">Sample 1</a>
-            <a class="collapse-item" href="#">Sample 2</a>
+            <a class="collapse-item" href="?menu=tender">Tender</a>
+            <a class="collapse-item" href="?menu=non_tender">Non Tender</a>
+            <a class="collapse-item" href="#">Pencatatan Non Tender</a>
+            <a class="collapse-item" href="#">Pencatatan Swakelola</a>
+            <a class="collapse-item" href="#">Pengadaan Darurat</a>
           </div>
         </div>
       </li>
