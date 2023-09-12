@@ -29,6 +29,10 @@ if($_GET['menu'] == 'non_tender'){
     include "include/non_tender.php" ;
 }
 
+if($_GET['menu'] == 'tambah_sppbj_non_tender'){
+    include "include/tambah_sppbj_non_tender.php" ;
+}
+
 if($_GET['menu'] == 'pencatatan_non_tender'){
     include "include/pencatatan_non_tender.php" ;
 }
