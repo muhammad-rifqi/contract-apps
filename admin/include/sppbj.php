@@ -61,7 +61,7 @@
                                     <td><a href="#" class="btn btn-secondary">Pembayaran</a></td>
                                     <td><a href="#" class="btn btn-secondary">Pilih</a></td>
                                     <td><?php echo $data['penilaian']; ?></td>
-                                    <td> <a class="btn btn-primary" href="include/cetak_sppbj.php?id=<?php echo $data['no_sppbj']; ?>" target="_blank" >Cetak</a> </td>
+                                    <td> <a class="btn btn-primary" href="include/cetak-sppbj.php?id=<?php echo $data['no_sppbj']; ?>" target="_blank" >Cetak</a> </td>
                                 </tr>
                                 <?php } ?>
                                 </tbody>

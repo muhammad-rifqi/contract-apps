@@ -1,6 +1,6 @@
 
 <div class="container-fluid">
-    <h4> Tambah SPPBJ </h4>
+    <h4> Tambah SPPBJ Non Tender </h4>
     <hr>
     <form method="POST" action="./aksi.php?act=insert_sppbj_non_tender" enctype="multipart/form-data">
         <input type='hidden' name='id_tender' value='<?php echo $_GET['id']; ?>'>

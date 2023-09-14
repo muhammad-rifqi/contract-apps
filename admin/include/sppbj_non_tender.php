@@ -10,7 +10,7 @@
                 <div class="collapse show " id="collapseCard1">
                     <div class="card-body scroll">
 
-                        <p> <a href="?menu=tambah_sppbj&id=<?php echo $_GET['id'];?>" class="btn btn-primary"> Tambah </a> </p>
+                        <p> <a href="tambah-sppbj-non-tender-<?php echo $_GET['id'];?>" class="btn btn-primary"> Tambah </a> </p>
 
                         <div class="table-responsive">
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
