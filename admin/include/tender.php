@@ -39,7 +39,7 @@
                                     <td><?php echo $data['kode_tender']; ?></td>
                                     <td><a href="edit-tender-<?php echo $data['id']; ?>"><?php echo $data['nama_tender']; ?></a></td>
                                     <td><?php echo $data['tahap_tender']; ?></td>
-                                    <td><a href="?menu=sppbj&id=<?php echo $data['id']; ?>" class="btn btn-warning">EKontrak</a> | <a href="aksi.php?act=delete_tender&id=<?php echo $data['id'];?>" onclick="return confirm('Are You Sure ??')" class="btn btn-danger">Batal</a></td>
+                                    <td><a href="add-sppbj-<?php echo $data['id']; ?>" class="btn btn-warning">EKontrak</a> | <a href="aksi.php?act=delete_tender&id=<?php echo $data['id'];?>" onclick="return confirm('Are You Sure ??')" class="btn btn-danger">Batal</a></td>
                                 </tr>
                                 <?php } ?>
                                 </tbody>
