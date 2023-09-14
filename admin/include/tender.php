@@ -10,7 +10,7 @@
                 <div class="collapse show " id="collapseCard1">
                     <div class="card-body scroll">
 
-                        <p> <a href="?menu=tambah_tender" class="btn btn-primary"> Tambah </a> </p>
+                        <p> <a href="add-tender" class="btn btn-primary"> Tambah </a> </p>
 
                         <div class="table-responsive">
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -37,7 +37,7 @@
                                 ?>
                                 <tr>
                                     <td><?php echo $data['kode_tender']; ?></td>
-                                    <td><a href="?menu=edit_tender&id=<?php echo $data['id']; ?>"><?php echo $data['nama_tender']; ?></a></td>
+                                    <td><a href="edit-tender-<?php echo $data['id']; ?>"><?php echo $data['nama_tender']; ?></a></td>
                                     <td><?php echo $data['tahap_tender']; ?></td>
                                     <td><a href="?menu=sppbj&id=<?php echo $data['id']; ?>" class="btn btn-warning">EKontrak</a> | <a href="aksi.php?act=delete_tender&id=<?php echo $data['id'];?>" onclick="return confirm('Are You Sure ??')" class="btn btn-danger">Batal</a></td>
                                 </tr>

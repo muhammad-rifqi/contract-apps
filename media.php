@@ -50,7 +50,7 @@
                     <li class="nav-item font-weight-bold"> <a
                             class="nav-link mr-3"href="#" style="color:white"> Home <span
                                 class="sr-only">(current)</span></a> </li>
-                    <li class="nav-item font-weight-bold"> <a class="nav-link" href="admin" style="color:white">Login<span class="sr-only">(current)</span></a> </li>
+                    <li class="nav-item font-weight-bold"> <a class="nav-link" href="admin/login" style="color:white">Login<span class="sr-only">(current)</span></a> </li>
                 </ul>
             </div>
         </nav>

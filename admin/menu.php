@@ -23,8 +23,8 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Data Paket:</h6>
-            <a class="collapse-item" href="?menu=tender">Tender</a>
-            <a class="collapse-item" href="?menu=non_tender">Non Tender</a>
+            <a class="collapse-item" href="tender">Tender</a>
+            <a class="collapse-item" href="non_tender">Non Tender</a>
             <a class="collapse-item" href="#">Pencatatan Non Tender</a>
             <a class="collapse-item" href="#">Pencatatan Swakelola</a>
             <a class="collapse-item" href="#">Pengadaan Darurat</a>
@@ -43,8 +43,8 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Data Users:</h6>
-            <a class="collapse-item" href="?menu=user">Users</a>
-            <a class="collapse-item" href="?menu=user_access">User Access</a>
+            <a class="collapse-item" href="user">Users</a>
+            <a class="collapse-item" href="user_access">User Access</a>
           </div>
         </div>
       </li>

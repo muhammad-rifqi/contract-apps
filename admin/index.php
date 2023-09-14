@@ -108,14 +108,14 @@
           if(hr.readyState == 4 && hr.status == 200) {
             var return_data = hr.responseText;
               if(return_data == "success"){
-                window.location="dashboard.php";
+                window.location="dashboard";
               }else{
               swal({
                 title: "Login Failed",
                 text: return_data,
                 icon: "error",
               }).then(function() {
-                window.location = "index.php";
+                window.location = "login";
               });
               }
           }
