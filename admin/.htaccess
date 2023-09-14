@@ -1,0 +1,4 @@
+RewriteEngine on
+Options All Indexes
+RewriteRule ^error error.html
+ErrorDocument 404 http://localhost/contract-apps/error

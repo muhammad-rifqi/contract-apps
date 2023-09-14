@@ -1,8 +1,9 @@
 
 <div class="container-fluid">
-    <h4> Tambah SPPBJ Non Tender</h4>
+    <h4> Tambah SPPBJ </h4>
     <hr>
-    <form method="POST" action="#" enctype="multipart/form-data">
+    <form method="POST" action="./aksi.php?act=insert_sppbj_non_tender" enctype="multipart/form-data">
+        <input type='hidden' name='id_tender' value='<?php echo $_GET['id']; ?>'>
         <div class="table-responsive">
             <h4 class="bg-primary text-light" style="padding: 10px">Informasi Paket</h4><hr>
             <table width="100%" border="1" cellspacing="0" cellpadding="4" class="table table-bordered">
@@ -23,11 +24,16 @@
                             <td width="20%">Sumber Dana </td>
                             <td width="20%">Detail</td>
                         </tr>
+                        <?php 
+                            $sql1 = mysqli_query($koneksi,"select * from rup where jenis_paket = 'non_tender' and kode_tender = '".$_GET['id']."'"); 
+                            $data1 = mysqli_fetch_assoc($sql1)
+                        ?>
+                        <input type="hidden" name="rup" value="<?php echo $data1['kode_rup'];?>">
                         <tr>
-                            <td>  </td>
-                            <td>  </td>
-                            <td>  </td>
-                            <td>  </td>
+                            <td> <?php echo $data1['kode_rup'];?> </td>
+                            <td> <?php echo $data1['nama_paket'];?> </td>
+                            <td> <?php echo $data1['sumber_dana'];?> </td>
+                            <td> <a href="?menu=detail"> Detail </a> </td>
                         </tr>
                         </table></td>
                     </tr>
@@ -100,16 +106,19 @@
                                     <td >Harga Final</td>
                                     <td >Undangan Kontrak</td>
                                 </tr>
-                                    
+                                    <?php 
+                                        $sql2 = mysqli_query($koneksi,"select * from penyedia where enis_paket = 'non_tender' and kode_tender = '".$_GET['id']."'"); 
+                                            while($data2 = mysqli_fetch_assoc($sql2)){
+                                    ?>
                                         <tr>
-                                            <td> <input type="radio" name="penyedia" value=""> </td>
-                                            <td>  </td>
-                                            <td>  </td>
-                                            <td>  </td>
-                                            <td>  </td>
+                                            <td> <input type="radio" name="penyedia" value="<?php echo $data2['id'].','.$data2['harga_final'].','.$data2['pemenang']; ?>"> </td>
+                                            <td> <?php echo $data2['pemenang']; ?></td>
+                                            <td> <?php echo $data2['npwp']; ?> </td>
+                                            <td> <?php echo $data2['email']; ?> </td>
+                                            <td> <?php echo $data2['harga_final']; ?> </td>
                                             <td> <a href= "#" > Undangan Kontrak </a></td>
                                         </tr>
-                               
+                                    <?php } ?>
                                     
                                     </table>
                                 </td>

@@ -33,4 +33,20 @@ if($_GET['act'] == 'insert_sppbj'){
     header('location:dashboard.php?menu=sppbj&id='.$_POST['id_tender']);
    
 }
+
+
+if ($_GET['act'] == 'insert_non_tender') {
+    mysqli_query($koneksi, "insert into non_tender(kode_tender,nama_tender,tahap_tender,created_at)values('" . $_POST['kode_tender'] . "','" . $_POST['nama_tender'] . "','" . $_POST['tahap_tender'] . "','" . $_POST['tanggal_input'] . "')");
+    header('location:dashboard.php?menu=non_tender');
+}
+
+if ($_GET['act'] == 'delete_non_tender') {
+    mysqli_query($koneksi, "delete from non_tender where id = '" . $_GET['id'] . "'");
+    header('location:dashboard.php?menu=non_tender');
+}
+
+if ($_GET['act'] == 'update_non_tender') {
+    mysqli_query($koneksi, "update non_tender set tahap_tender = '".$_POST['tahap_tender']."' where id = '" . $_POST['id'] . "'");
+    header('location:dashboard.php?menu=non_tender');
+}
 ?>

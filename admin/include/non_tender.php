@@ -10,7 +10,7 @@
                 <div class="collapse show " id="collapseCard1">
                     <div class="card-body scroll">
 
-                        <p> <a href="#" class="btn btn-primary"> Tambah </a> </p>
+                        <p> <a href="?menu=tambah_non_tender" class="btn btn-primary"> Tambah </a> </p>
 
                         <div class="table-responsive">
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -31,13 +31,17 @@
                                 </tr>
                                 </tfoot>
                                 <tbody>
-                               
-                                <tr>
-                                    <td> 1111111 </td>
-                                    <td> Non Tender 1 </td>
-                                    <td> Belum Di Mulai </td>
-                                    <td> <a href="?menu=tambah_sppbj_non_tender" class="btn btn-secondary">Ekontrak </a></td>
+                                <?php 
+                                $sql = mysqli_query($koneksi,"select * from non_tender");
+                                while($data = mysqli_fetch_array($sql)){
+                                ?>
+                                 <tr>
+                                    <td><?php echo $data['kode_tender']; ?></td>
+                                    <td><a href="?menu=edit_non_tender&id=<?php echo $data['id']; ?>"><?php echo $data['nama_tender']; ?></a></td>
+                                    <td><?php echo $data['tahap_tender']; ?></td>
+                                    <td><a href="?menu=sppbj_non_tender&id=<?php echo $data['id']; ?>" class="btn btn-warning">EKontrak</a> | <a href="aksi.php?act=delete_non_tender&id=<?php echo $data['id'];?>" onclick="return confirm('Are You Sure ??')" class="btn btn-danger">Batal</a></td>
                                 </tr>
+                                <?php } ?>
                                 </tbody>
                             </table>
                         </div>
