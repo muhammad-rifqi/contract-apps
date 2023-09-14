@@ -1,6 +1,7 @@
 RewriteEngine on
 RewriteRule ^error$ error.html [L]
 RewriteRule ^login$ index.php [L]
+RewriteRule ^logout$ logout.php [L]
 RewriteRule ^dashboard$ dashboard.php [L]
 RewriteRule ^tender$ dashboard.php?menu=tender [L]
 RewriteRule ^non_tender$ dashboard.php?menu=non_tender [L]
