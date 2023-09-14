@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 08, 2023 at 10:28 AM
+-- Generation Time: Sep 14, 2023 at 11:31 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -33,8 +33,30 @@ CREATE TABLE `form_sppbj` (
   `no_sppbj` varchar(255) NOT NULL,
   `lampiran_sppbj` varchar(255) NOT NULL,
   `tanggal` date NOT NULL,
-  `kota` varchar(255) NOT NULL
+  `kota` varchar(255) NOT NULL,
+  `jenis_paket` enum('tender','non_tender') NOT NULL DEFAULT 'tender'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `non_tender`
+--
+
+CREATE TABLE `non_tender` (
+  `id` int(11) NOT NULL,
+  `kode_tender` varchar(255) NOT NULL,
+  `nama_tender` varchar(255) NOT NULL,
+  `tahap_tender` varchar(255) NOT NULL,
+  `created_at` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `non_tender`
+--
+
+INSERT INTO `non_tender` (`id`, `kode_tender`, `nama_tender`, `tahap_tender`, `created_at`) VALUES
+(2, '2000001', 'Tender 2 Non Tender', 'sedang_berjalan', '2023-09-14');
 
 -- --------------------------------------------------------
 
@@ -48,16 +70,17 @@ CREATE TABLE `penyedia` (
   `pemenang` varchar(100) NOT NULL,
   `npwp` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `harga_final` int(11) NOT NULL
+  `harga_final` int(11) NOT NULL,
+  `jenis_paket` enum('tender','non_tender') NOT NULL DEFAULT 'tender'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `penyedia`
 --
 
-INSERT INTO `penyedia` (`id`, `kode_tender`, `pemenang`, `npwp`, `email`, `harga_final`) VALUES
-(1, '1', 'Rekanan 11', '11.11.1111.111', 'rekanan@gmail.com', 370000),
-(2, '1', 'Rekanan 11', '11.11.1111.111', 'rekanan@gmail.com', 500000);
+INSERT INTO `penyedia` (`id`, `kode_tender`, `pemenang`, `npwp`, `email`, `harga_final`, `jenis_paket`) VALUES
+(1, '1', 'Rekanan 11', '11.11.1111.111', 'rekanan@gmail.com', 370000, 'tender'),
+(2, '1', 'Rekanan 11', '11.11.1111.111', 'rekanan@gmail.com', 500000, 'tender');
 
 -- --------------------------------------------------------
 
@@ -72,7 +95,8 @@ CREATE TABLE `ppk` (
   `nip_ppk` varchar(100) NOT NULL,
   `jabatan_ppk` varchar(100) NOT NULL,
   `satuan_kerja` varchar(100) NOT NULL,
-  `alamat` varchar(255) NOT NULL
+  `alamat` varchar(255) NOT NULL,
+  `jenis_paket` enum('tender','non_tender') NOT NULL DEFAULT 'tender'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -86,15 +110,16 @@ CREATE TABLE `rup` (
   `kode_rup` varchar(100) NOT NULL,
   `kode_tender` varchar(100) NOT NULL,
   `nama_paket` varchar(100) NOT NULL,
-  `sumber_dana` varchar(255) NOT NULL
+  `sumber_dana` varchar(255) NOT NULL,
+  `jenis_paket` enum('tender','non_tender') NOT NULL DEFAULT 'tender'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `rup`
 --
 
-INSERT INTO `rup` (`id`, `kode_rup`, `kode_tender`, `nama_paket`, `sumber_dana`) VALUES
-(1, '34785683745', '1', 'Renovasi Aplikasi Security', 'APBN');
+INSERT INTO `rup` (`id`, `kode_rup`, `kode_tender`, `nama_paket`, `sumber_dana`, `jenis_paket`) VALUES
+(1, '34785683745', '1', 'Renovasi Aplikasi Security', 'APBN', 'tender');
 
 -- --------------------------------------------------------
 
@@ -104,23 +129,32 @@ INSERT INTO `rup` (`id`, `kode_rup`, `kode_tender`, `nama_paket`, `sumber_dana`)
 
 CREATE TABLE `sppbj` (
   `id` int(11) NOT NULL,
-  `kode_tender` varchar(100) NOT NULL,
-  `nama_tender` varchar(100) NOT NULL,
-  `rup` text NOT NULL,
-  `harga_penawaran` int(11) NOT NULL,
-  `no_sppbj` varchar(100) NOT NULL,
-  `lampiran_sppbj` varchar(255) NOT NULL,
-  `kota_sppbj` text NOT NULL,
-  `nama_ppk` varchar(100) NOT NULL,
-  `nip_ppk` varchar(100) NOT NULL,
-  `jabatan_ppk` varchar(100) NOT NULL,
-  `nama_satuan_kerja` varchar(100) NOT NULL,
-  `alamat_satuan_kerja` varchar(100) NOT NULL,
-  `penyedia` text NOT NULL,
-  `tembusan` varchar(255) NOT NULL,
-  `dokumen_berita_acara` varchar(255) NOT NULL,
-  `dokumen_cetak` varchar(255) NOT NULL
+  `kode_tender` varchar(100) DEFAULT NULL,
+  `nama_tender` varchar(100) DEFAULT NULL,
+  `rup` text DEFAULT NULL,
+  `harga_penawaran` int(11) DEFAULT NULL,
+  `no_sppbj` varchar(100) DEFAULT NULL,
+  `lampiran_sppbj` varchar(255) DEFAULT NULL,
+  `tanggal_sppbj` date NOT NULL,
+  `kota_sppbj` text DEFAULT NULL,
+  `nama_ppk` varchar(100) DEFAULT NULL,
+  `nip_ppk` varchar(100) DEFAULT NULL,
+  `jabatan_ppk` varchar(100) DEFAULT NULL,
+  `nama_satuan_kerja` varchar(100) DEFAULT NULL,
+  `alamat_satuan_kerja` varchar(100) DEFAULT NULL,
+  `penyedia` text DEFAULT NULL,
+  `tembusan` varchar(255) DEFAULT NULL,
+  `dokumen_berita_acara` varchar(255) DEFAULT NULL,
+  `dokumen_cetak` varchar(255) DEFAULT NULL,
+  `jenis_paket` enum('tender','non_tender') NOT NULL DEFAULT 'tender'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `sppbj`
+--
+
+INSERT INTO `sppbj` (`id`, `kode_tender`, `nama_tender`, `rup`, `harga_penawaran`, `no_sppbj`, `lampiran_sppbj`, `tanggal_sppbj`, `kota_sppbj`, `nama_ppk`, `nip_ppk`, `jabatan_ppk`, `nama_satuan_kerja`, `alamat_satuan_kerja`, `penyedia`, `tembusan`, `dokumen_berita_acara`, `dokumen_cetak`, `jenis_paket`) VALUES
+(6, '120999', 'Tender 1', '34785683745', 57000000, '000845', 'null', '2023-09-12', 'Denpasar', 'PPK 25', '09754064', 'Direktur', 'Lembaga Sppbj Pemerintah', 'Jakarta', '1,370000,Rekanan 11', '', 'XADO101(1).pdf', 'rifki.JPG', 'tender');
 
 -- --------------------------------------------------------
 
@@ -141,7 +175,7 @@ CREATE TABLE `tender` (
 --
 
 INSERT INTO `tender` (`id`, `kode_tender`, `nama_tender`, `tahap_tender`, `created_at`) VALUES
-(1, '120999', 'Tender 1', 'Baru Sampe Flow Chart', '0000-00-00');
+(1, '120999', 'Tender 1', 'sudah_selesai', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -172,6 +206,12 @@ INSERT INTO `users` (`id`, `username`, `password`, `access_level`) VALUES
 -- Indexes for table `form_sppbj`
 --
 ALTER TABLE `form_sppbj`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `non_tender`
+--
+ALTER TABLE `non_tender`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -221,6 +261,12 @@ ALTER TABLE `form_sppbj`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `non_tender`
+--
+ALTER TABLE `non_tender`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `penyedia`
 --
 ALTER TABLE `penyedia`
@@ -242,7 +288,7 @@ ALTER TABLE `rup`
 -- AUTO_INCREMENT for table `sppbj`
 --
 ALTER TABLE `sppbj`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tender`
