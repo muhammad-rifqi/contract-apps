@@ -7,6 +7,7 @@ RewriteRule ^non_tender$ dashboard.php?menu=non_tender [L]
 RewriteRule ^add-tender$ dashboard.php?menu=tambah_tender [L]
 RewriteRule ^edit-tender-(.*)$ dashboard.php?menu=edit_tender&id=$1 [L]
 RewriteRule ^add-sppbj-(.*)$ dashboard.php?menu=sppbj&id=$1 [L]
+RewriteRule ^tambah-sppbj-(.*)$ dashboard.php?menu=tambah_sppbj&id=$1 [L]
 
 Options All Indexes
 ErrorDocument 404 error
