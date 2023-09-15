@@ -30,7 +30,7 @@ if($_GET['act'] == 'insert_sppbj'){
     }else{
         mysqli_query($koneksi, "insert into sppbj(kode_tender , nama_tender , rup , harga_penawaran , no_sppbj,lampiran_sppbj , tanggal_sppbj, kota_sppbj , nama_ppk ,nip_ppk ,jabatan_ppk , nama_satuan_kerja , alamat_satuan_kerja , penyedia ,tembusan ,dokumen_berita_acara,dokumen_cetak ,jenis_paket )values('".$_POST['kode_tender']."','".$_POST['nama_tender']."','".$_POST['rup']."','".$_POST['harga_penawaran']."','".$_POST['no_sppbj']."','".$_POST['lampiran_sppbj']."','".$_POST['tanggal_sppbj']."','".$_POST['kota_sppbj']."','".$_POST['nama_ppk']."','".$_POST['nip_ppk']."','".$_POST['jabatan_ppk']."','".$_POST['nama_satuan_kerja']."','".$_POST['alamat_satuan_kerja']."','".$_POST['penyedia']."','".$_POST['tembusan']."','".$nama_file."','".$nama_file2."','tender')");
     }
-    header('location:dashboard.php?menu=sppbj&id='.$_POST['id_tender']);
+    header('location:add-sppbj-'.$_POST['id_tender']);
    
 }
 
