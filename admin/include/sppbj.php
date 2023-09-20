@@ -46,7 +46,7 @@
                                 </tfoot>
                                 <tbody>
                                 <?php 
-                                $sql = mysqli_query($koneksi,"select * from sppbj");
+                                $sql = mysqli_query($koneksi,"select * from sppbj where jenis_paket = 'tender'");
                                 while($data = mysqli_fetch_array($sql)){
                                 $peny = explode(",",$data['penyedia']);
                                 ?>

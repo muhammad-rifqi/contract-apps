@@ -2,10 +2,10 @@
 <div class="container-fluid">
     <h4> Tambah SPPBJ Non Tender </h4>
     <hr>
-    <form method="POST" action="./aksi.php?act=insert_sppbj_non_tender" enctype="multipart/form-data">
+    <form method="POST" action="./aksi.php?act=inserts_sppbj_non_tender" enctype="multipart/form-data">
         <input type='hidden' name='id_tender' value='<?php echo $_GET['id']; ?>'>
         <div class="table-responsive">
-            <h4 class="bg-primary text-light" style="padding: 10px">Informasi Paket</h4><hr>
+            <h4 class="bg-danger text-light" style="padding: 10px">Informasi Paket</h4><hr>
             <table width="100%" border="1" cellspacing="0" cellpadding="4" class="table table-bordered">
                     <tr>
                         <td width="219">Kode Tender </td>
@@ -18,7 +18,7 @@
                     <tr>
                         <td>Rencana Pengadaan Umum </td>
                         <td><table width="100%" border="1" cellspacing="0" cellpadding="4">
-                        <tr class="bg-info text-light">
+                        <tr class="bg-warning text-light">
                             <td width="20%">Kode Rup </td>
                             <td width="20%">Nama Paket </td>
                             <td width="20%">Sumber Dana </td>
@@ -45,7 +45,7 @@
 
             <!-- // ////////////////////// -->
 
-            <h4 class="bg-primary text-light" style="padding: 10px"> Form SPPBJ </h4><hr>
+            <h4 class="bg-danger text-light" style="padding: 10px"> Form SPPBJ </h4><hr>
                 <table width="100%" border="1" cellspacing="0" cellpadding="4" class="table table-bordered">
                     <tr>
                         <td width="219">NO SPPBJ </td>
@@ -66,7 +66,7 @@
                 </table>
 
 
-                <h4 class="bg-primary text-light" style="padding: 10px"> Pihak Pertama </h4><hr>
+                <h4 class="bg-danger text-light" style="padding: 10px"> Pihak Pertama </h4><hr>
                 <table width="100%" border="1" cellspacing="0" cellpadding="4" class="table table-bordered">
                     <tr>
                         <td width="219">Nama PPK </td>
@@ -92,13 +92,13 @@
 
                 <!-- // ////////////////////// -->
 
-                <h4 class="bg-primary text-light" style="padding: 10px">Informasi Pendukung</h4><hr>
+                <h4 class="bg-danger text-light" style="padding: 10px">Informasi Pendukung</h4><hr>
                     <table width="100%" border="1" cellspacing="0" cellpadding="4" class="table table-bordered">
                           
                             <tr>
                                 <td>Penyedia </td>
                                 <td><table width="100%" border="1" cellspacing="0" cellpadding="4">
-                                <tr class="bg-info text-light">
+                                <tr class="bg-warning text-light">
                                     <td>#</td>
                                     <td >Pemenang </td>
                                     <td >Npwp </td>
@@ -107,7 +107,7 @@
                                     <td >Undangan Kontrak</td>
                                 </tr>
                                     <?php 
-                                        $sql2 = mysqli_query($koneksi,"select * from penyedia where enis_paket = 'non_tender' and kode_tender = '".$_GET['id']."'"); 
+                                        $sql2 = mysqli_query($koneksi,"select * from penyedia where jenis_paket = 'non_tender' and kode_tender = '".$_GET['id']."'"); 
                                             while($data2 = mysqli_fetch_assoc($sql2)){
                                     ?>
                                         <tr>
@@ -131,7 +131,7 @@
 
                         <!-- // ////////////////////// -->
 
-                    <h4 class="bg-primary text-light" style="padding: 10px"> Dokumen Berita Acara </h4><hr>
+                    <h4 class="bg-danger text-light" style="padding: 10px"> Dokumen Berita Acara </h4><hr>
                         <table width="100%" border="1" cellspacing="0" cellpadding="4" class="table table-bordered">
                             <tr>
                                 <td width="219">Dokumen Berita Acara </td>
@@ -141,7 +141,7 @@
 
                 <!-- // ////////////////////// -->
 
-                <h4 class="bg-primary text-light" style="padding: 10px"> Dokument SPPBJ </h4><hr>
+                <h4 class="bg-danger text-light" style="padding: 10px"> Dokument SPPBJ </h4><hr>
                         <table width="100%" border="1" cellspacing="0" cellpadding="4" class="table table-bordered">
                             <tr>
                                 <td width="219">Dokumen Cetak </td>
