@@ -8,7 +8,7 @@
             <h4 class="bg-primary text-light" style="padding: 10px">Informasi Paket</h4><hr>
             <table width="100%" border="1" cellspacing="0" cellpadding="4" class="table table-bordered">
                     <tr>
-                        <td width="219">Kode Tender </td>
+                        <td width="219">No Tender </td>
                         <td width="495"><input type="text" name="kode_tender" class="form-control"></td>
                     </tr>
                     <tr>

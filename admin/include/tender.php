@@ -16,7 +16,7 @@
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
                                 <tr>
-                                    <th>Kode Tender</th>
+                                    <th>No Tender</th>
                                     <th>Nama Tender</th>
                                     <th>Tahap</th>
                                     <th>Aksi</th>
@@ -24,7 +24,7 @@
                                 </thead>
                                 <tfoot>
                                 <tr>
-                                    <th>Kode Tender</th>
+                                    <th>No Tender</th>
                                     <th>Nama Tender</th>
                                     <th>Tahap</th>
                                     <th>Aksi</th>

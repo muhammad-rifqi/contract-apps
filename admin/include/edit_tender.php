@@ -6,8 +6,8 @@
         <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
         <div class="row">
             <div class="col">
-            <label for="validationTooltip01">Kode Tender</label>
-            <input type="text" name="kode_tender" class="form-control" placeholder="Kode Tender" value="<?php echo $data['kode_tender']?>" disabled>
+            <label for="validationTooltip01">No Tender</label>
+            <input type="text" name="kode_tender" class="form-control" placeholder="No Tender" value="<?php echo $data['kode_tender']?>" disabled>
             </div>
             <div class="col">
             <label for="validationTooltip01">Nama Tender</label>

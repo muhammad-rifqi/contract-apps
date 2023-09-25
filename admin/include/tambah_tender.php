@@ -4,8 +4,8 @@
     <form method="POST" action="./aksi.php?act=insert_tender">
         <div class="row">
             <div class="col">
-            <label for="validationTooltip01">Kode Tender</label>
-            <input type="text" name="kode_tender" class="form-control" placeholder="Kode Tender">
+            <label for="validationTooltip01">No Tender</label>
+            <input type="text" name="kode_tender" class="form-control" placeholder="No Tender">
             </div>
             <div class="col">
             <label for="validationTooltip01">Nama Tender</label>

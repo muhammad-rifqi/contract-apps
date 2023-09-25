@@ -17,7 +17,7 @@ if(empty($_SESSION['username'])){
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Kabupaten Musi Rawas Utara - Dashboard</title>
+  <title>Dinas Pekerjaan Umum dan Tata Ruang  - Dashboard</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -123,7 +123,7 @@ if(empty($_SESSION['username'])){
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; e-Kontrk 2023</span>
+            <span>Copyright &copy; Dinas Pekerjaan Umum dan Tata Ruang </span>
           </div>
         </div>
       </footer>
