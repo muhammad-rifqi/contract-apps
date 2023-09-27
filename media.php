@@ -9,7 +9,7 @@
     <meta name="author" content="Integra Inovasi Indonesia">
     <meta name="keyword" content="Bootstrap,Admin,Template,jQuery,CSS,HTML,RWD,Dashboard,Vue">
     <link rel="shortcut icon" href="img/icon.ico">
-    <title>Dinas Pekerjaan Umum dan Tata Ruang - Kabupaten Musi Rawas Utara </title>
+    <title>Dinas Pekerjaan Umum dan Penataan Ruang - Kabupaten Musi Rawas Utara </title>
     <link href="css/public-app.css" rel="stylesheet">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
@@ -29,7 +29,7 @@
                     <img class="d-block d-sm-none mr-2" src="img/logo-kab.png" width="30" height="auto"> </div>
                 <div class="text-white">
                     <h4 class="d-block d-sm-none title mb-0 mt-1">eKontrak Musi Rawas Utara</h4>
-                    <h4 class="d-none d-sm-block title mb-0">Dinas Pekerjaan Umum dan Tata Ruang </h4>
+                    <h4 class="d-none d-sm-block title mb-0">Dinas Pekerjaan Umum dan Penataan Ruang </h4>
                     <div class="d-none d-sm-block" style="letter-spacing: 3px;">Kabupaten Musi Rawas Utara</div>
                 </div>
             </div> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"

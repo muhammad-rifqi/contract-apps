@@ -17,7 +17,7 @@ if(empty($_SESSION['username'])){
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Dinas Pekerjaan Umum dan Tata Ruang  - Dashboard</title>
+  <title>Dinas Pekerjaan Umum dan Penataan Ruang  - Dashboard</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -123,7 +123,7 @@ if(empty($_SESSION['username'])){
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Dinas Pekerjaan Umum dan Tata Ruang </span>
+            <span>Copyright &copy; Dinas Pekerjaan Umum dan Penataan Ruang </span>
           </div>
         </div>
       </footer>
