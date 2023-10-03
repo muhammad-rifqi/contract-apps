@@ -56,4 +56,8 @@ if($_GET['menu'] == 'pencatatan_swakelola'){
 if($_GET['menu'] == 'pengadaan_darurat'){
     include "include/pengadaan_darurat.php" ;
 }
+if($_GET['menu'] == 'input_kontrak_tender'){
+    include "include/input_kontrak_tender.php" ;
+}
+
 ?>

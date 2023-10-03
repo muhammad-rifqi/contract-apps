@@ -13,6 +13,9 @@ RewriteRule ^add-non-tender$ dashboard.php?menu=tambah_non_tender [L]
 RewriteRule ^edit-non-tender-(.*)$ dashboard.php?menu=edit_non_tender&id=$1 [L]
 RewriteRule ^sppbj-non-tender-(.*)$ dashboard.php?menu=sppbj_non_tender&id=$1 [L]
 RewriteRule ^insert-sppbj-non-tender-(.*)$ dashboard.php?menu=tambah_sppbj_non_tender&id=$1 [L]
+RewriteRule ^input-kontrak-tender$ dashboard.php?menu=input_kontrak_tender [L]
+
+
 
 Options All Indexes
 ErrorDocument 404 error
