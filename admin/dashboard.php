@@ -6,243 +6,136 @@ if(empty($_SESSION['username'])){
     echo "<h1>Session Expired!</h1>";
 }else{ 
 ?>
+<!DOCT
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Dinas Pekerjaan Umum dan Penataan Ruang  - Dashboard</title>
-
-  <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name="description" content="Aplikasi eKontrak Kabupaten Musi Rawas Utara">
+    <meta name="author" content="Integra Inovasi Indonesia">
+    <meta name="keyword" content="Bootstrap,Admin,Template,jQuery,CSS,HTML,RWD,Dashboard,Vue">
+    <link rel="shortcut icon" href="../img/icon.ico">
+    <title>Dinas Pekerjaan Umum dan Penataan Ruang - Kabupaten Musi Rawas Utara </title>
+    <link href="../css/public-app.css" rel="stylesheet">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link
     href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
     rel="stylesheet">
-
-  <!-- Custom styles for this template-->
-  <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
-  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    
+    
 
 </head>
-
-<body id="page-top">
-
-  <!-- Page Wrapper -->
-  <div id="wrapper">
-
-    <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-      <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
-        <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-laugh-wink"></i>
-        </div>
-        <div class="sidebar-brand-text mx-3">SI <br> <sup> Pendongkrak</sup></div>
-      </a>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider my-0">
-
-      <?php include "menu.php"; ?>
-
-    <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
-
-      <!-- Main Content -->
-      <div id="content">
-
-        <!-- Topbar -->
-        <nav class="navbar navbar-expand navbar-light bg-primary topbar mb-4 static-top shadow">
-
-          <!-- Sidebar Toggle (Topbar) -->
-          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-            <i class="fa fa-bars"></i>
-          </button>
-
-          <div class="topbar-divider d-none d-sm-block"></div>
-
-          <!-- Topbar Navbar -->
-          <ul class="navbar-nav ml-auto">
-
-
-            <div class="topbar-divider d-none d-sm-block"></div>
-
-            <!-- Nav Item - User Information -->
-            <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-white small"><?php echo $_SESSION['username']; ?></span>
-                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
-              </a>
-              <!-- Dropdown - User Information -->
-              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
-                  <i class="fas fa-user fa-sm fa-fw mr-2 white-gray-400"></i>
-                  Profile
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 white-gray-400"></i>
-                  Logout
-                </a>
-              </div>
-            </li>
-
-          </ul>
-
+<body id="public-5" class="app" style="background-color:#D8D8D8;">
+    <div class="background-wrapper w-100"></div>
+    <div class="p-0" style="min-height: 100vh;">
+        <nav id="nav-menu" class="navbar navbar-expand-lg navbar-dark bg-blue-2 fixed-top"
+            style="border-bottom: 1px solid #fff">
+            <div class="px-3 py-1 d-flex flex-row">
+                <div class="px-2"> <img class="d-none d-sm-block mr-2" src="../img/logo-kab.png" width="40" height="auto">
+                    <img class="d-block d-sm-none mr-2" src="../img/logo-kab.png" width="30" height="auto"> </div>
+                <div class="text-white">
+                    <h4 class="d-block d-sm-none title mb-0 mt-1">eKontrak Musi Rawas Utara</h4>
+                    <h4 class="d-none d-sm-block title mb-0">Dinas Pekerjaan Umum dan Penataan Ruang </h4>
+                    <div class="d-none d-sm-block" style="letter-spacing: 3px;">Kabupaten Musi Rawas Utara</div>
+                </div>
+            </div> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> <span
+                    class="navbar-toggler-icon"></span> </button>
         </nav>
-        <!-- End of Topbar -->
 
-        <!-- Begin Page Content -->
-        <div class="container-fluid">
-
-          <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-          </div>
-
-            <?php include "content.php"; ?>
-
-        </div>
-        <!-- /.container-fluid -->
-
-      </div>
-      <!-- End of Main Content -->
-
-      <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Dinas Pekerjaan Umum dan Penataan Ruang </span>
-          </div>
-        </div>
-      </footer>
-      <!-- End of Footer -->
-
-    </div>
-    <!-- End of Content Wrapper -->
-
-  </div>
-  <!-- End of Page Wrapper -->
-
-  <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a>
-
-  <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">Are You Sure ??.</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="logout">Logout</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="modal fade" id="modalSSKK" tabindex="-1" role="dialog" aria-labelledby="modalSSKKTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalSSKKTitle">Modal SSKK</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-            <div class="form-group">
-              <label for="rancangan_kontrak" class="col-form-label">Rancangan Kontrak :</label>
-              <input type="text" class="form-control" id="rancangan_kontrak">
+        <br><br><br>
+        <nav class="navbar navbar-expand-lg navbar-warning bg-warning">
+            <a class="navbar-brand" href="#">  </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="dashboard">Beranda <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="tender">Daftar Paket</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Setting</a>
+                </li>
+                </ul>
+                <span class="navbar-text text-dark">
+                <?php echo $_SESSION['username']; ?> | <a href="logout">  Logout </a>
+                </span>
             </div>
-            <div class="form-group">
-              <label for="upload_sskk" class="col-form-label">Upload SSKK :</label>
-              <input type="file" class="form-control" id="upload_sskk">
-              <p> ** PDF Required </p>
+        </nav>
+        <div class="p-0 d-flex flex-column flex-wrap">
+            <div id="content"> 
+                <div class="container container-bigger bg-white">
+                    <br>
+                        <div class="row">
+                                <div class="col-2 px-2 text-center text-dark">
+                                    <a href="tender"><u>Tender</u></a>
+                                </div>
+                                <div class="col-2 px-2 text-center text-dark">
+                                <a href="non_tender"><u>Non Tender</u></a>                                   
+                                </div>
+                                <div class="col-2 px-2 text-center text-dark">
+                                    <u>Pencatatan Non Tender</u>
+                                </div>
+                                <div class="col-2 px-2 text-center text-dark">
+                                    <u>Pencatatan Swa Kelola</u>
+                                </div>
+                                <div class="col-4 px-2 text-center text-dark">
+                                    <u>Pengadaan Darurat</u>                                    
+                                </div> 
+                        </div>
+                        <hr>
+                        <br>
+
+                        <div class="alert alert-danger" role="alert">
+                            <h4>Fitur e-Kontrak akan aktif jika : </h4>
+                            <ul>
+                                <li>Sudah masuk tahap SPPBJ atau sudah melewati tahapan upload dokumen Penawaran untuk Tender Cepat;</li>
+                                <li>Pokja Pemilihan sudah menetapkan dan mengumumkan pemenang; </li>
+                                <li>Seluruh sanggah sudah dijawab oleh Pokja Pemilihan; dan/atau </li>
+                                <li>Seluruh jawaban sanggah Salah/Ditolak.</li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <br>
+                        <div class="row">                            
+                            <div class="col-12 px-1">
+                                    <?php include "content.php"; ?>
+                            </div>
+                        </div>
+                        <hr>
+                </div>
             </div>
-            <div class="form-group">
-              <label for="cara_pembayaran" class="col-form-label">Cara Pembayaran :</label>
-                <select class="form-control" id="cara_pembayaran">
-                    <option value='termin'>Termin</option>
-                    <option value='bulanan'>Bulanan</option>
-                    <option value='sekaligus'>Sekaligus</option>
-                </select>
+
+
+            <div class="container container-bigger bg-white">
+                <div class="row">
+                    <div class="col-12 px-0">
+                        <h6 class="bg-dark text-center text-white py-4 mb-0"
+                            style="text-transform: uppercase;letter-spacing: 3px">  </h6>
+                    </div>
+                </div>
             </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+        </div>
+        
     </div>
-  </div>
-</div>
-
-
-<div class="modal fade" id="modalPILIH" tabindex="-1" role="dialog" aria-labelledby="modalPILIHTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalPILIHTitle">Modal PILIH</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-            <div class="form-group">
-              <label for="status_kontrak" class="col-form-label">Status Kontrak :</label>
-              <p> <input type="radio" id="status_kontrak" value="selesai"> Selesai </p>
-              <p> <input type="radio" id="status_kontrak" value="pemutusan_kontrak"> Pemutusan Kontrak </p>
-              <p> <input type="radio" id="status_kontrak" value="penghentian_kontrak"> Penghentian Kontrak </p>
-            </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-  <!-- Bootstrap core JavaScript-->
+</body>
+    <script src="js/sb-admin-2.min.js"></script>
+  <!-- Page level plugins -->
   <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.min.js"></script>
-
-
   <script src="vendor/datatables/jquery.dataTables.min.js"></script>
   <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
   <script src="js/demo/datatables-demo.js"></script>
 
-
-
-</body>
 
 </html>
 <?php } ?>
