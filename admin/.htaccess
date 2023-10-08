@@ -1,5 +1,5 @@
 RewriteEngine on
-RewriteRule ^error$ www.ekontrak.smartkampung.com/error.html [L]
+RewriteRule ^error$ error.html [L]
 RewriteRule ^login$ index.php [L]
 RewriteRule ^logout$ logout.php [L]
 RewriteRule ^dashboard$ dashboard.php [L]
@@ -24,4 +24,4 @@ RewriteRule ^input-termin-non-tender$ dashboard.php?menu=input_termin_non_tender
 
 
 Options All Indexes
-ErrorDocument 404 error
+ErrorDocument 404 www.ekontrak.smartkampung.com/error
