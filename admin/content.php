@@ -60,4 +60,32 @@ if($_GET['menu'] == 'input_kontrak_tender'){
     include "include/input_kontrak_tender.php" ;
 }
 
+if($_GET['menu'] == 'input_spmk_tender'){
+    include "include/input_spmk_tender.php" ;
+}
+
+if($_GET['menu'] == 'input_pembayaran_tender'){
+    include "include/input_pembayaran_tender.php" ;
+}
+
+if($_GET['menu'] == 'input_termin_tender'){
+    include "include/input_termin_tender.php" ;
+}
+
+if($_GET['menu'] == 'input_kontrak_non_tender'){
+    include "include/input_kontrak_non_tender.php" ;
+}
+
+if($_GET['menu'] == 'input_spmk_non_tender'){
+    include "include/input_spmk_non_tender.php" ;
+}
+
+if($_GET['menu'] == 'input_pembayaran_non_tender'){
+    include "include/input_pembayaran_non_tender.php" ;
+}
+
+if($_GET['menu'] == 'input_termin_non_tender'){
+    include "include/input_termin_non_tender.php" ;
+}
+
 ?>

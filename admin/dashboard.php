@@ -165,7 +165,7 @@ if(empty($_SESSION['username'])){
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="modalSSKKTitle">Modal title</h5>
+        <h5 class="modal-title" id="modalSSKKTitle">Modal SSKK</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -196,6 +196,33 @@ if(empty($_SESSION['username'])){
     </div>
   </div>
 </div>
+
+
+<div class="modal fade" id="modalPILIH" tabindex="-1" role="dialog" aria-labelledby="modalPILIHTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalPILIHTitle">Modal PILIH</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+            <div class="form-group">
+              <label for="status_kontrak" class="col-form-label">Status Kontrak :</label>
+              <p> <input type="radio" id="status_kontrak" value="selesai"> Selesai </p>
+              <p> <input type="radio" id="status_kontrak" value="pemutusan_kontrak"> Pemutusan Kontrak </p>
+              <p> <input type="radio" id="status_kontrak" value="penghentian_kontrak"> Penghentian Kontrak </p>
+            </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
   <!-- Bootstrap core JavaScript-->

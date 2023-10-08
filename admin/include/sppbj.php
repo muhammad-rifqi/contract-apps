@@ -57,9 +57,9 @@
                                     <td><a href="input-kontrak-tender" class="btn btn-secondary">Kontrak</a></td>
                                     <td><?php echo $peny[1]; ?></td>
                                     <td><a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#modalSSKK">SSKK</a></td>
-                                    <td><a href="#" class="btn btn-secondary">SPMK/SPP</a></td>
-                                    <td><a href="#" class="btn btn-secondary">Pembayaran</a></td>
-                                    <td><a href="#" class="btn btn-secondary">Pilih</a></td>
+                                    <td><a href="input-spmk-tender" class="btn btn-secondary">SPMK/SPP</a></td>
+                                    <td><a href="input-pembayaran-tender" class="btn btn-secondary">Pembayaran</a></td>
+                                    <td><a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#modalPILIH">Pilih</a></td>
                                     <td><?php echo $data['penilaian']; ?></td>
                                     <td> <a class="btn btn-primary" href="include/cetak_sppbj.php?id=<?php echo $data['no_sppbj']; ?>" target="_blank" >Cetak</a> </td>
                                 </tr>

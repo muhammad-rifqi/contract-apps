@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 14, 2023 at 11:31 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 7.4.29
+-- Generation Time: Oct 08, 2023 at 11:22 AM
+-- Server version: 10.4.25-MariaDB
+-- PHP Version: 7.4.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -61,6 +61,20 @@ INSERT INTO `non_tender` (`id`, `kode_tender`, `nama_tender`, `tahap_tender`, `c
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `pembayaran`
+--
+
+CREATE TABLE `pembayaran` (
+  `id` int(11) NOT NULL,
+  `termin` varchar(255) NOT NULL,
+  `berita_acara` varchar(255) NOT NULL,
+  `progress` varchar(255) NOT NULL,
+  `flag` enum('tender','non_tender') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `penyedia`
 --
 
@@ -80,7 +94,9 @@ CREATE TABLE `penyedia` (
 
 INSERT INTO `penyedia` (`id`, `kode_tender`, `pemenang`, `npwp`, `email`, `harga_final`, `jenis_paket`) VALUES
 (1, '1', 'Rekanan 11', '11.11.1111.111', 'rekanan@gmail.com', 370000, 'tender'),
-(2, '1', 'Rekanan 11', '11.11.1111.111', 'rekanan@gmail.com', 500000, 'tender');
+(2, '1', 'Rekanan 11', '11.11.1111.111', 'rekanan@gmail.com', 500000, 'tender'),
+(3, '2', 'Rekanan 11', '11.11.1111.111', 'rekanan@gmail.com', 370000, 'non_tender'),
+(4, '2', 'Rekanan 11', '11.11.1111.111', 'rekanan@gmail.com', 500000, 'non_tender');
 
 -- --------------------------------------------------------
 
@@ -119,7 +135,8 @@ CREATE TABLE `rup` (
 --
 
 INSERT INTO `rup` (`id`, `kode_rup`, `kode_tender`, `nama_paket`, `sumber_dana`, `jenis_paket`) VALUES
-(1, '34785683745', '1', 'Renovasi Aplikasi Security', 'APBN', 'tender');
+(1, '34785683745', '1', 'Renovasi Aplikasi Security', 'APBN', 'tender'),
+(2, '34785683745', '2', 'Renovasi Aplikasi Security', 'APBN', 'non_tender');
 
 -- --------------------------------------------------------
 
@@ -154,7 +171,8 @@ CREATE TABLE `sppbj` (
 --
 
 INSERT INTO `sppbj` (`id`, `kode_tender`, `nama_tender`, `rup`, `harga_penawaran`, `no_sppbj`, `lampiran_sppbj`, `tanggal_sppbj`, `kota_sppbj`, `nama_ppk`, `nip_ppk`, `jabatan_ppk`, `nama_satuan_kerja`, `alamat_satuan_kerja`, `penyedia`, `tembusan`, `dokumen_berita_acara`, `dokumen_cetak`, `jenis_paket`) VALUES
-(6, '120999', 'Tender 1', '34785683745', 57000000, '000845', 'null', '2023-09-12', 'Denpasar', 'PPK 25', '09754064', 'Direktur', 'Lembaga Sppbj Pemerintah', 'Jakarta', '1,370000,Rekanan 11', '', 'XADO101(1).pdf', 'rifki.JPG', 'tender');
+(6, '120999', 'Tender 1', '34785683745', 57000000, '000845', 'null', '2023-09-12', 'Denpasar', 'PPK 25', '09754064', 'Direktur', 'Lembaga Sppbj Pemerintah', 'Jakarta', '1,370000,Rekanan 11', '', 'XADO101(1).pdf', 'rifki.JPG', 'tender'),
+(7, '120999', 'Tender 1', '34785683745', 57000000, '000845', 'null', '2023-09-22', '', 'PPK 25', '09754064', 'Direktur', 'Lembaga Sppbj Pemerintah', 'Jakarta', '4,500000,Rekanan 11', 'Surat', 'dummy.pdf', 'dummy2.pdf', 'non_tender');
 
 -- --------------------------------------------------------
 
@@ -215,6 +233,12 @@ ALTER TABLE `non_tender`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `pembayaran`
+--
+ALTER TABLE `pembayaran`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `penyedia`
 --
 ALTER TABLE `penyedia`
@@ -267,10 +291,16 @@ ALTER TABLE `non_tender`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `pembayaran`
+--
+ALTER TABLE `pembayaran`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `penyedia`
 --
 ALTER TABLE `penyedia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `ppk`
@@ -282,13 +312,13 @@ ALTER TABLE `ppk`
 -- AUTO_INCREMENT for table `rup`
 --
 ALTER TABLE `rup`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `sppbj`
 --
 ALTER TABLE `sppbj`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tender`
