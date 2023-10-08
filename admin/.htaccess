@@ -24,4 +24,4 @@ RewriteRule ^input-termin-non-tender$ dashboard.php?menu=input_termin_non_tender
 
 
 Options All Indexes
-ErrorDocument 404 www.ekontrak.smartkampung.com/error
+ErrorDocument 404 error
