@@ -20,7 +20,7 @@ if(empty($_SESSION['username'])){
     <link rel="shortcut icon" href="../img/icon.ico">
     <title>Dinas Pekerjaan Umum dan Penataan Ruang - Kabupaten Musi Rawas Utara </title>
     <link href="../css/public-app.css" rel="stylesheet">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -31,7 +31,7 @@ if(empty($_SESSION['username'])){
     
 
 </head>
-<body id="public-5" class="app" style="background-color:#D8D8D8;">
+<body id="public-5"  style="background-color:#D8D8D8;">
     <div class="background-wrapper w-100"></div>
     <div class="p-0" style="min-height: 100vh;">
         <nav id="nav-menu" class="navbar navbar-expand-lg navbar-dark bg-blue-2 fixed-top"
@@ -117,17 +117,7 @@ if(empty($_SESSION['username'])){
             </div>
 
 
-            <div class="container container-bigger bg-white">
-                <div class="row">
-                    <div class="col-12 px-0">
-                        <h6 class="bg-dark text-center text-white py-4 mb-0"
-                            style="text-transform: uppercase;letter-spacing: 3px">  </h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="modalSSKK" tabindex="-1" role="dialog" aria-labelledby="modalSSKKTitle" aria-hidden="true">
+            <div class="modal fade" id="modalSSKK" tabindex="-1" role="dialog" aria-labelledby="modalSSKKTitle" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                 <div class="modal-header">
@@ -188,20 +178,29 @@ if(empty($_SESSION['username'])){
                 </div>
             </div>
             </div>
-        
+            
+
+
+            <div class="container container-bigger bg-white">
+                <div class="row">
+                    <div class="col-12 px-0">
+                        <h6 class="bg-dark text-center text-white py-4 mb-0"
+                            style="text-transform: uppercase;letter-spacing: 3px">  </h6>
+                    </div>
+                </div>
+            </div>
+        </div> 
     </div>
+
 </body>
 
-
-
-
- <script src="js/sb-admin-2.min.js"></script>
-  <!-- Page level plugins -->
+   <!-- Page level plugins -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/datatables/jquery.dataTables.min.js"></script>
   <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+  <script src="js/sb-admin-2.min.js"></script>
+  <script src="../js/public-app.js"></script>
   <script src="js/demo/datatables-demo.js"></script>
-
 
 </html>
 <?php } ?>

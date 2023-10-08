@@ -10,22 +10,24 @@
                 <div class="collapse show " id="collapseCard1">
                     <div class="card-body scroll">
 
-                        <p> <a href="input-termin-tender" class="btn btn-primary"> Tambah Termin</a> </p>
+                        <p> <a href="input-termin-tender" class="btn btn-primary"> Tambah </a> </p>
 
                         <div class="table-responsive">
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
                                 <tr>
+                                    <th>No</th>
                                     <th>Termin</th>
                                     <th>Berita Acara</th>
-                                    <th>Progress pembayaran</th>
+                                    <th>Progress</th>
                                 </tr>
                                 </thead>
                                 <tfoot>
                                 <tr>
+                                <th>No</th>
                                     <th>Termin</th>
                                     <th>Berita Acara</th>
-                                    <th>Progress pembayaran</th>
+                                    <th>Progress</th>
                                 </tr>
                                 </tfoot>
                                 <tbody>
@@ -34,6 +36,7 @@
                                 while($data = mysqli_fetch_array($sql)){
                                 ?>
                                  <tr>
+                                    <td><?php echo $data['id']; ?></td>
                                     <td><?php echo $data['termin']; ?></td>
                                     <td><?php echo $data['berita_acara']; ?></td>
                                     <td><?php echo $data['progress']; ?></td>
