@@ -2,4 +2,4 @@ RewriteEngine on
 RewriteRule ^home media.php
 RewriteRule ^error error.html
 Options All Indexes
-ErrorDocument 404 https://ekontrak.smartkampung.com/error
+ErrorDocument 404 error
