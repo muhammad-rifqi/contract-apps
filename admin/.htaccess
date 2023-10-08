@@ -1,5 +1,5 @@
 RewriteEngine on
-RewriteRule ^error$ error.html [L]
+RewriteRule ^error$ https://ekontrak.smartkampung.com/error.html [L]
 RewriteRule ^login$ index.php [L]
 RewriteRule ^logout$ logout.php [L]
 RewriteRule ^dashboard$ dashboard.php [L]
