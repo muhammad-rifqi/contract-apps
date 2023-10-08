@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <h3 class="bg-primary text-light" style="padding: 10px"> Informasi Paket </h3>
     <hr>
-    <form method="POST" action="./aksi.php?act=insert_tender">
+    <form method="POST" action="./print.php?act=cetak_tender">
         <div class="row">
             <div class="col">
             <label for="validationTooltip01">No Tender</label>
@@ -151,8 +151,9 @@
                 </div>
         </div>
 
-        
-
-        <button type="submit" class="btn btn-primary">Simpan</button>
+        <br>
+        <p>
+            <button type="submit" class="btn btn-primary"> Cetak </button>
+        </p>
         </form>
     </div>
