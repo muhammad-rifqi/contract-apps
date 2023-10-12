@@ -1,7 +1,8 @@
 <div class="container-fluid">
     <h3 class="bg-primary text-light" style="padding: 10px"> Informasi Paket </h3>
     <hr>
-    <form method="POST" action="./print.php?act=cetak_tender">
+    <!-- <form method="POST" action="./print.php?act=cetak_tender"> -->
+    <form method="POST" action="../admin/surat_perjanjian_listrik_danau_rayo.htm">
         <div class="row">
             <div class="col">
             <label for="validationTooltip01">No Tender</label>
