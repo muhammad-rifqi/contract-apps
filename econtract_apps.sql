@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Oct 08, 2023 at 11:22 AM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 7.4.30
+-- Host: localhost:3306
+-- Generation Time: Oct 12, 2023 at 09:45 AM
+-- Server version: 10.5.22-MariaDB-cll-lve
+-- PHP Version: 8.1.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `econtract_apps`
+-- Database: `smartkam_contract_apps`
 --
 
 -- --------------------------------------------------------
@@ -35,7 +35,7 @@ CREATE TABLE `form_sppbj` (
   `tanggal` date NOT NULL,
   `kota` varchar(255) NOT NULL,
   `jenis_paket` enum('tender','non_tender') NOT NULL DEFAULT 'tender'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -49,7 +49,7 @@ CREATE TABLE `non_tender` (
   `nama_tender` varchar(255) NOT NULL,
   `tahap_tender` varchar(255) NOT NULL,
   `created_at` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `non_tender`
@@ -69,8 +69,8 @@ CREATE TABLE `pembayaran` (
   `termin` varchar(255) NOT NULL,
   `berita_acara` varchar(255) NOT NULL,
   `progress` varchar(255) NOT NULL,
-  `flag` enum('tender','non_tender') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `flag` enum('tender','non_tender') NOT NULL DEFAULT 'non_tender'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -86,7 +86,7 @@ CREATE TABLE `penyedia` (
   `email` varchar(100) NOT NULL,
   `harga_final` int(11) NOT NULL,
   `jenis_paket` enum('tender','non_tender') NOT NULL DEFAULT 'tender'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `penyedia`
@@ -113,7 +113,7 @@ CREATE TABLE `ppk` (
   `satuan_kerja` varchar(100) NOT NULL,
   `alamat` varchar(255) NOT NULL,
   `jenis_paket` enum('tender','non_tender') NOT NULL DEFAULT 'tender'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -128,7 +128,7 @@ CREATE TABLE `rup` (
   `nama_paket` varchar(100) NOT NULL,
   `sumber_dana` varchar(255) NOT NULL,
   `jenis_paket` enum('tender','non_tender') NOT NULL DEFAULT 'tender'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `rup`
@@ -164,7 +164,7 @@ CREATE TABLE `sppbj` (
   `dokumen_berita_acara` varchar(255) DEFAULT NULL,
   `dokumen_cetak` varchar(255) DEFAULT NULL,
   `jenis_paket` enum('tender','non_tender') NOT NULL DEFAULT 'tender'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `sppbj`
@@ -186,7 +186,7 @@ CREATE TABLE `tender` (
   `nama_tender` varchar(255) NOT NULL,
   `tahap_tender` varchar(255) NOT NULL,
   `created_at` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tender`
@@ -206,7 +206,7 @@ CREATE TABLE `users` (
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `access_level` enum('admin','user') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
