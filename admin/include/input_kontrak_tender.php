@@ -160,4 +160,3 @@
     </div>
 
 
-    <script>window.print()</script>
