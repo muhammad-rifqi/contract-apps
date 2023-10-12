@@ -158,3 +158,6 @@
         </p>
         </form>
     </div>
+
+
+    <script>window.print()</script>
