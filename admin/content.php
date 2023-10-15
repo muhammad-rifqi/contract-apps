@@ -88,4 +88,15 @@ if($_GET['menu'] == 'input_termin_non_tender'){
     include "include/input_termin_non_tender.php" ;
 }
 
+if($_GET['menu'] == 'add_pencatatan_non_tender'){
+    include "include/add_pencatatan_non_tender.php" ;
+}
+
+if($_GET['menu'] == 'add_pencatatan_swakelola'){
+    include "include/add_pencatatan_swakelola.php" ;
+}
+
+if($_GET['menu'] == 'add_pengadaan_darurat'){
+    include "include/add_pengadaan_darurat.php" ;
+}
 ?>

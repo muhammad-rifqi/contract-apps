@@ -26,5 +26,10 @@ RewriteRule ^pencatatan-non-tender$ dashboard.php?menu=pencatatan_non_tender [L]
 RewriteRule ^pencatatan-swakelola$ dashboard.php?menu=pencatatan_swakelola [L]
 RewriteRule ^pengadaan-darurat$ dashboard.php?menu=pengadaan_darurat [L]
 
+RewriteRule ^add-pencatatan-non-tender$ dashboard.php?menu=add_pencatatan_non_tender [L]
+RewriteRule ^add-pencatatan-swakelola$ dashboard.php?menu=add_pencatatan_swakelola [L]
+RewriteRule ^add-pengadaan-darurat$ dashboard.php?menu=add_pengadaan_darurat [L]
+
+
 Options All Indexes
 ErrorDocument 404 error
