@@ -84,13 +84,13 @@ if(empty($_SESSION['username'])){
                                 <a href="non_tender"><u>Non Tender</u></a>                                   
                                 </div>
                                 <div class="col-2 px-2 text-center text-dark">
-                                    <u>Pencatatan Non Tender</u>
+                                    <a href="pencatatan-non-tender"><u>Pencatatan Non Tender</u></a>
                                 </div>
                                 <div class="col-2 px-2 text-center text-dark">
-                                    <u>Pencatatan Swa Kelola</u>
+                                    <a href="pencatatan-swakelola"><u>Pencatatan Swa Kelola</u></a>
                                 </div>
                                 <div class="col-4 px-2 text-center text-dark">
-                                    <u>Pengadaan Darurat</u>                                    
+                                    <a href="pengadaan-darurat"><u>Pengadaan Darurat</u></a>                                    
                                 </div> 
                         </div>
                         <hr>

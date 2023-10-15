@@ -25,9 +25,9 @@
             <h6 class="collapse-header">Data Paket:</h6>
             <a class="collapse-item" href="tender">Tender</a>
             <a class="collapse-item" href="non_tender">Non Tender</a>
-            <a class="collapse-item" href="#">Pencatatan Non Tender</a>
-            <a class="collapse-item" href="#">Pencatatan Swakelola</a>
-            <a class="collapse-item" href="#">Pengadaan Darurat</a>
+            <a class="collapse-item" href="pencatatan-non-tender">Pencatatan Non Tender</a>
+            <a class="collapse-item" href="pencatatan-swakelola">Pencatatan Swakelola</a>
+            <a class="collapse-item" href="pengadaan-darurat">Pengadaan Darurat</a>
           </div>
         </div>
       </li>

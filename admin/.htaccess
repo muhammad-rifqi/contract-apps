@@ -22,6 +22,9 @@ RewriteRule ^input-spmk-non-tender$ dashboard.php?menu=input_spmk_non_tender [L]
 RewriteRule ^input-pembayaran-non-tender$ dashboard.php?menu=input_pembayaran_non_tender [L]
 RewriteRule ^input-termin-non-tender$ dashboard.php?menu=input_termin_non_tender [L]
 
+RewriteRule ^pencatatan-non-tender$ dashboard.php?menu=pencatatan_non_tender [L]
+RewriteRule ^pencatatan-swakelola$ dashboard.php?menu=pencatatan_swakelola [L]
+RewriteRule ^pengadaan-darurat$ dashboard.php?menu=pengadaan_darurat [L]
 
 Options All Indexes
 ErrorDocument 404 error
