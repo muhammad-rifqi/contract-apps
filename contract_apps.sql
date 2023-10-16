@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 12, 2023 at 09:45 AM
+-- Generation Time: Oct 16, 2023 at 12:27 PM
 -- Server version: 10.5.22-MariaDB-cll-lve
 -- PHP Version: 8.1.16
 
@@ -71,6 +71,48 @@ CREATE TABLE `pembayaran` (
   `progress` varchar(255) NOT NULL,
   `flag` enum('tender','non_tender') NOT NULL DEFAULT 'non_tender'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pencatatan_non_tender`
+--
+
+CREATE TABLE `pencatatan_non_tender` (
+  `id` int(11) NOT NULL,
+  `nama_paket` varchar(255) NOT NULL,
+  `status` varchar(100) NOT NULL,
+  `tanggal_dibuat` date NOT NULL,
+  `satuan_kerja` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pencatatan_swakelola`
+--
+
+CREATE TABLE `pencatatan_swakelola` (
+  `id` int(11) NOT NULL,
+  `nama_paket` varchar(255) NOT NULL,
+  `status` varchar(100) NOT NULL,
+  `tanggal_dibuat` date NOT NULL,
+  `satuan_kerja` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pengadaan_darurat`
+--
+
+CREATE TABLE `pengadaan_darurat` (
+  `id` int(11) NOT NULL,
+  `nama_paket` varchar(255) NOT NULL,
+  `status` varchar(100) NOT NULL,
+  `tanggal_dibuat` date NOT NULL,
+  `satuan_kerja` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -239,6 +281,24 @@ ALTER TABLE `pembayaran`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `pencatatan_non_tender`
+--
+ALTER TABLE `pencatatan_non_tender`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `pencatatan_swakelola`
+--
+ALTER TABLE `pencatatan_swakelola`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `pengadaan_darurat`
+--
+ALTER TABLE `pengadaan_darurat`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `penyedia`
 --
 ALTER TABLE `penyedia`
@@ -288,12 +348,30 @@ ALTER TABLE `form_sppbj`
 -- AUTO_INCREMENT for table `non_tender`
 --
 ALTER TABLE `non_tender`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `pembayaran`
 --
 ALTER TABLE `pembayaran`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `pencatatan_non_tender`
+--
+ALTER TABLE `pencatatan_non_tender`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `pencatatan_swakelola`
+--
+ALTER TABLE `pencatatan_swakelola`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `pengadaan_darurat`
+--
+ALTER TABLE `pengadaan_darurat`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
