@@ -154,7 +154,7 @@
 
         <br>
         <p>
-            <button type="submit" class="btn btn-primary"> Cetak </button>
+            <button type="submit" class="btn btn-primary"> Simpan </button>
         </p>
         </form>
     </div>
