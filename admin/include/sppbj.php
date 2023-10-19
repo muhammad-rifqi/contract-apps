@@ -54,7 +54,7 @@
                                     <td><?php echo $data['no_sppbj']; ?></td>
                                     <td><?php echo $data['tanggal_sppbj']; ?></a></td>
                                     <td><?php echo $peny[2]; ?></td>
-                                    <td><a href="input-kontrak-tender" class="btn btn-secondary">Kontrak</a></td>
+                                    <td><a href="input-kontrak-tender-<?php echo $_GET['id'];?>" class="btn btn-secondary">Kontrak</a></td>
                                     <td><?php echo $peny[1]; ?></td>
                                     <td><a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#modalSSKK">SSKK</a></td>
                                     <td><a href="input-spmk-tender" class="btn btn-secondary">SPMK/SPP</a></td>

@@ -66,4 +66,27 @@ if($_GET['act'] == 'inserts_sppbj_non_tender'){
    
 }
 
+
+if ($_GET['act'] == 'insert_pengadaan_darurat') {
+    mysqli_query($koneksi, "insert into pengadaan_darurat(nama_paket,status,tanggal_dibuat,satuan_kerja)values('" . $_POST['nama_paket'] . "','" . $_POST['status'] . "','" . $_POST['tanggal_dibuat'] . "','" . $_POST['satuan_kerja'] . "')");
+    header('location:pengadaan-darurat');
+}
+
+if ($_GET['act'] == 'insert_pencatatan_swakelola') {
+    mysqli_query($koneksi, "insert into pencatatan_swakelola(nama_paket,status,tanggal_dibuat,satuan_kerja)values('" . $_POST['nama_paket'] . "','" . $_POST['status'] . "','" . $_POST['tanggal_dibuat'] . "','" . $_POST['satuan_kerja'] . "')");
+    header('location:pencatatan-swakelola');
+}
+
+if ($_GET['act'] == 'insert_pencatatan_non_tender') {
+    mysqli_query($koneksi, "insert into pencatatan_non_tender(nama_paket,status,tanggal_dibuat,satuan_kerja)values('" . $_POST['nama_paket'] . "','" . $_POST['status'] . "','" . $_POST['tanggal_dibuat'] . "','" . $_POST['satuan_kerja'] . "')");
+    header('location:pencatatan-non-tender');
+}
+
+if ($_GET['act'] == 'insert_kontrak_tender') {
+    mysqli_query($koneksi, "insert into kontrak_tender(no_tender,nama_tender,lingkup_kerjaan,no_surat,tgl_surat,kota_surat,tipe_penyedia_ph1,nama_penyedia_ph1,alamat_penyedia_ph1,no_akte_pendirian,tgl_akte_pendirian,wakil_sah_pendirian,tipe_penyedia_ph2,nama_penyedia_ph2,alamat_penyedia_ph2,nama_bank,no_rekening,nama_pemilik_rekening,nilai_kontrak,alasan_perubahan_nilai_kontrak,nama_pemilik_rekening_info,nama_produk,nama_usaha_mikro,jenis_kontrak,info_lainnya)values('" . $_POST['nama_paket'] . "','" . $_POST['status'] . "','" . $_POST['tanggal_dibuat'] . "','" . $_POST['satuan_kerja'] . "')");
+    header('location:pencatatan-non-tender');
+}
+
+
+
 ?>

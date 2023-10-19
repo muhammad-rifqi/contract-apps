@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <h4> Tambah Pengadaan Darurat </h4>
     <hr>
-    <form method="POST" action="./aksi.php?act=insert_tender">
+    <form method="POST" action="./aksi.php?act=insert_pengadaan_darurat">
         <div class="row">
             <div class="col">
             <label for="validationTooltip01">Nama Paket</label>
