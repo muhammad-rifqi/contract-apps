@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Oct 16, 2023 at 12:27 PM
--- Server version: 10.5.22-MariaDB-cll-lve
--- PHP Version: 8.1.16
+-- Host: 127.0.0.1
+-- Generation Time: Oct 20, 2023 at 01:33 AM
+-- Server version: 10.4.25-MariaDB
+-- PHP Version: 7.4.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `smartkam_contract_apps`
+-- Database: `econtract_apps`
 --
 
 -- --------------------------------------------------------
@@ -35,7 +35,77 @@ CREATE TABLE `form_sppbj` (
   `tanggal` date NOT NULL,
   `kota` varchar(255) NOT NULL,
   `jenis_paket` enum('tender','non_tender') NOT NULL DEFAULT 'tender'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kontrak_non_tender`
+--
+
+CREATE TABLE `kontrak_non_tender` (
+  `id` int(11) NOT NULL,
+  `no_tender` varchar(100) NOT NULL,
+  `nama_tender` varchar(100) NOT NULL,
+  `lingkup_kerjaan` varchar(100) NOT NULL,
+  `no_surat` varchar(100) NOT NULL,
+  `tgl_surat` date NOT NULL,
+  `kota_surat` varchar(100) NOT NULL,
+  `tipe_penyedia_ph1` varchar(100) NOT NULL,
+  `nama_penyedia_ph1` varchar(100) NOT NULL,
+  `alamat_penyedia_ph1` text NOT NULL,
+  `no_akte_pendirian` varchar(100) NOT NULL,
+  `tgl_akte_pendirian` date NOT NULL,
+  `wakil_sah_pendirian` varchar(100) NOT NULL,
+  `tipe_penyedia_ph2` varchar(100) NOT NULL,
+  `nama_penyedia_ph2` varchar(100) NOT NULL,
+  `alamat_penyedia_ph2` text NOT NULL,
+  `nama_bank` varchar(100) NOT NULL,
+  `no_rekening` varchar(100) NOT NULL,
+  `nama_pemilik_rekening` varchar(100) NOT NULL,
+  `nilai_kontrak` int(11) NOT NULL,
+  `alasan_perubahan_nilai_kontrak` text NOT NULL,
+  `nama_pemilik_rekening_info` varchar(100) NOT NULL,
+  `nama_produk` varchar(100) NOT NULL,
+  `nama_usaha_mikro` varchar(100) NOT NULL,
+  `jenis_kontrak` varchar(100) NOT NULL,
+  `info_lainnya` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kontrak_tender`
+--
+
+CREATE TABLE `kontrak_tender` (
+  `id` int(11) NOT NULL,
+  `no_tender` varchar(100) NOT NULL,
+  `nama_tender` varchar(100) NOT NULL,
+  `lingkup_kerjaan` varchar(100) NOT NULL,
+  `no_surat` varchar(100) NOT NULL,
+  `tgl_surat` date NOT NULL,
+  `kota_surat` varchar(100) NOT NULL,
+  `tipe_penyedia_ph1` varchar(100) NOT NULL,
+  `nama_penyedia_ph1` varchar(100) NOT NULL,
+  `alamat_penyedia_ph1` text NOT NULL,
+  `no_akte_pendirian` varchar(100) NOT NULL,
+  `tgl_akte_pendirian` date NOT NULL,
+  `wakil_sah_pendirian` varchar(100) NOT NULL,
+  `tipe_penyedia_ph2` varchar(100) NOT NULL,
+  `nama_penyedia_ph2` varchar(100) NOT NULL,
+  `alamat_penyedia_ph2` text NOT NULL,
+  `nama_bank` varchar(100) NOT NULL,
+  `no_rekening` varchar(100) NOT NULL,
+  `nama_pemilik_rekening` varchar(100) NOT NULL,
+  `nilai_kontrak` int(11) NOT NULL,
+  `alasan_perubahan_nilai_kontrak` text NOT NULL,
+  `nama_pemilik_rekening_info` varchar(100) NOT NULL,
+  `nama_produk` varchar(100) NOT NULL,
+  `nama_usaha_mikro` varchar(100) NOT NULL,
+  `jenis_kontrak` varchar(100) NOT NULL,
+  `info_lainnya` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -49,7 +119,7 @@ CREATE TABLE `non_tender` (
   `nama_tender` varchar(255) NOT NULL,
   `tahap_tender` varchar(255) NOT NULL,
   `created_at` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `non_tender`
@@ -70,7 +140,7 @@ CREATE TABLE `pembayaran` (
   `berita_acara` varchar(255) NOT NULL,
   `progress` varchar(255) NOT NULL,
   `flag` enum('tender','non_tender') NOT NULL DEFAULT 'non_tender'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -84,7 +154,14 @@ CREATE TABLE `pencatatan_non_tender` (
   `status` varchar(100) NOT NULL,
   `tanggal_dibuat` date NOT NULL,
   `satuan_kerja` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pencatatan_non_tender`
+--
+
+INSERT INTO `pencatatan_non_tender` (`id`, `nama_paket`, `status`, `tanggal_dibuat`, `satuan_kerja`) VALUES
+(2, 'abc', 'aktif', '2023-10-19', 'satuan kerja');
 
 -- --------------------------------------------------------
 
@@ -98,7 +175,14 @@ CREATE TABLE `pencatatan_swakelola` (
   `status` varchar(100) NOT NULL,
   `tanggal_dibuat` date NOT NULL,
   `satuan_kerja` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pencatatan_swakelola`
+--
+
+INSERT INTO `pencatatan_swakelola` (`id`, `nama_paket`, `status`, `tanggal_dibuat`, `satuan_kerja`) VALUES
+(1, 'abc', 'aktif', '2023-10-19', 'satuan kerja');
 
 -- --------------------------------------------------------
 
@@ -112,7 +196,14 @@ CREATE TABLE `pengadaan_darurat` (
   `status` varchar(100) NOT NULL,
   `tanggal_dibuat` date NOT NULL,
   `satuan_kerja` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pengadaan_darurat`
+--
+
+INSERT INTO `pengadaan_darurat` (`id`, `nama_paket`, `status`, `tanggal_dibuat`, `satuan_kerja`) VALUES
+(1, 'abc', 'aktif', '2023-10-19', 'satuan kerja');
 
 -- --------------------------------------------------------
 
@@ -128,7 +219,7 @@ CREATE TABLE `penyedia` (
   `email` varchar(100) NOT NULL,
   `harga_final` int(11) NOT NULL,
   `jenis_paket` enum('tender','non_tender') NOT NULL DEFAULT 'tender'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `penyedia`
@@ -155,7 +246,7 @@ CREATE TABLE `ppk` (
   `satuan_kerja` varchar(100) NOT NULL,
   `alamat` varchar(255) NOT NULL,
   `jenis_paket` enum('tender','non_tender') NOT NULL DEFAULT 'tender'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -170,7 +261,7 @@ CREATE TABLE `rup` (
   `nama_paket` varchar(100) NOT NULL,
   `sumber_dana` varchar(255) NOT NULL,
   `jenis_paket` enum('tender','non_tender') NOT NULL DEFAULT 'tender'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `rup`
@@ -206,7 +297,7 @@ CREATE TABLE `sppbj` (
   `dokumen_berita_acara` varchar(255) DEFAULT NULL,
   `dokumen_cetak` varchar(255) DEFAULT NULL,
   `jenis_paket` enum('tender','non_tender') NOT NULL DEFAULT 'tender'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `sppbj`
@@ -228,7 +319,7 @@ CREATE TABLE `tender` (
   `nama_tender` varchar(255) NOT NULL,
   `tahap_tender` varchar(255) NOT NULL,
   `created_at` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tender`
@@ -248,7 +339,7 @@ CREATE TABLE `users` (
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `access_level` enum('admin','user') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
@@ -360,19 +451,19 @@ ALTER TABLE `pembayaran`
 -- AUTO_INCREMENT for table `pencatatan_non_tender`
 --
 ALTER TABLE `pencatatan_non_tender`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `pencatatan_swakelola`
 --
 ALTER TABLE `pencatatan_swakelola`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `pengadaan_darurat`
 --
 ALTER TABLE `pengadaan_darurat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `penyedia`
@@ -402,7 +493,7 @@ ALTER TABLE `sppbj`
 -- AUTO_INCREMENT for table `tender`
 --
 ALTER TABLE `tender`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
