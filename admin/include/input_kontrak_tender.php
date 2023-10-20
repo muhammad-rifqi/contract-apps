@@ -3,7 +3,8 @@
     <hr>
     <!-- <form method="POST" action="./print.php?act=cetak_tender"> -->
     <form method="POST" action="./aksi.php?act=insert_kontrak_tender">
-        <input type="hidden">
+
+        <input type="hidden" name="id_tender" value="<?php echo $_GET['id'];?>">
         <div class="row">
             <div class="col">
             <label for="validationTooltip01">No Tender</label>
@@ -47,15 +48,15 @@
         <div class="row">
             <div class="col">
             <label for="validationTooltip01">Tipe Penyedia</label>
-            <input type="text" name="tipe_penyedia" class="form-control" placeholder="Tipe Penyedia">
+            <input type="text" name="tipe_penyedia_ph1" class="form-control" placeholder="Tipe Penyedia">
             </div>
             <div class="col">
             <label for="validationTooltip01">Nama Penyedia</label>
-            <input type="text" name="nama_penyedia" class="form-control" placeholder="Nama Penyedia">
+            <input type="text" name="nama_penyedia_ph1" class="form-control" placeholder="Nama Penyedia">
             </div>
             <div class="col">
             <label for="validationTooltip01">Alamat Penyedia</label>
-            <input type="text" name="alamat_penyedia" class="form-control" placeholder="Alamat Penyedia">
+            <input type="text" name="alamat_penyedia_ph1" class="form-control" placeholder="Alamat Penyedia">
             </div>
         </div>
         <br>
@@ -82,15 +83,15 @@
         <div class="row">
                 <div class="col">
                 <label for="validationTooltip01">Tipe Penyedia</label>
-                <input type="text" name="no_akte_pendirian" class="form-control" placeholder="Akte Pendirian">
+                <input type="text" name="tipe_penyedia_ph2" class="form-control" placeholder="Akte Pendirian">
                 </div>
                 <div class="col">
                 <label for="validationTooltip01"> Nama Penyedia </label>
-                <input type="text" name="tanggal_akte_pendirian" class="form-control" placeholder="Tanggal Akte Pendirian">
+                <input type="text" name="nama_penyedia_ph2" class="form-control" placeholder="Tanggal Akte Pendirian">
                 </div>
                 <div class="col">
                 <label for="validationTooltip01">Alamat Penyedia</label>
-                <input type="text" name="wakil_sah_penyedia" class="form-control" placeholder="Wakil Sah Penyedia">
+                <input type="text" name="alamat_penyedia_ph2" class="form-control" placeholder="Wakil Sah Penyedia">
                 </div>
         </div>
         <br>
@@ -124,7 +125,7 @@
                 </div>
                 <div class="col">
                 <label for="validationTooltip01">Nama Pemilik Rekening Bank</label>
-                <input type="text" name="nama_pemilik_rekening" class="form-control" placeholder="Nama Pemilik Rekening Bank">
+                <input type="text" name="nama_pemilik_rekening_info" class="form-control" placeholder="Nama Pemilik Rekening Bank">
                 </div>
         </div>
         <br>
@@ -136,7 +137,7 @@
                 </div>
                 <div class="col">
                 <label for="validationTooltip01"> Nama Usaha Mikro Kecil </label>
-                <input type="text" name="alasan_perubahan_nilai_kontrak" class="form-control" placeholder=" Nama Usaha Mikro Kecil ">
+                <input type="text" name="nama_usaha_mikro" class="form-control" placeholder=" Nama Usaha Mikro Kecil ">
                 </div>
         </div>
         <br>

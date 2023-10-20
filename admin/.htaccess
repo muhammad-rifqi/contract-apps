@@ -17,7 +17,7 @@ RewriteRule ^input-kontrak-tender-(.*)$ dashboard.php?menu=input_kontrak_tender&
 RewriteRule ^input-spmk-tender$ dashboard.php?menu=input_spmk_tender [L]
 RewriteRule ^input-pembayaran-tender$ dashboard.php?menu=input_pembayaran_tender [L]
 RewriteRule ^input-termin-tender$ dashboard.php?menu=input_termin_tender [L]
-RewriteRule ^input-kontrak-non-tender$ dashboard.php?menu=input_kontrak_non_tender [L]
+
 RewriteRule ^input-spmk-non-tender$ dashboard.php?menu=input_spmk_non_tender [L]
 RewriteRule ^input-pembayaran-non-tender$ dashboard.php?menu=input_pembayaran_non_tender [L]
 RewriteRule ^input-termin-non-tender$ dashboard.php?menu=input_termin_non_tender [L]
@@ -29,6 +29,8 @@ RewriteRule ^pengadaan-darurat$ dashboard.php?menu=pengadaan_darurat [L]
 RewriteRule ^add-pencatatan-non-tender$ dashboard.php?menu=add_pencatatan_non_tender [L]
 RewriteRule ^add-pencatatan-swakelola$ dashboard.php?menu=add_pencatatan_swakelola [L]
 RewriteRule ^add-pengadaan-darurat$ dashboard.php?menu=add_pengadaan_darurat [L]
+
+RewriteRule ^input-kontrak-non-tender-(.*)$ dashboard.php?menu=input_kontrak_non_tender&id=$1 [L]
 
 
 Options All Indexes

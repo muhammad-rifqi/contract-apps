@@ -1,3 +1,8 @@
+<?php 
+include "admin/config.php"; 
+$tender = mysqli_fetch_assoc(mysqli_query($koneksi,"select * from sppbj where jenis_paket = 'tender' order by id desc limit 1"));
+$nontender = mysqli_fetch_assoc(mysqli_query($koneksi,"select * from sppbj where jenis_paket = 'non_tender' order by id desc limit 1"));
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -89,8 +94,8 @@
                                                                     <h6 class="m-0 font-weight-bold text-default">Kontrak Tender</h6>
                                                                     </div>
                                                                     <div class="card-body">
-                                                                    <p>Nilai Kontrak : Rp.50.000.000</p>
-                                                                    <p>Paket : </p>
+                                                                    <p>Nilai Kontrak : Rp.<?php echo number_format($tender['harga_penawaran']);?></p>
+                                                                    <p>Paket : <?php echo $tender['jenis_paket']; ?> </p>
                                                                     </div>
                                                                 </div>
                                                         </div>
@@ -101,8 +106,8 @@
                                                                     <h6 class="m-0 font-weight-bold text-default">Kontrak Non Tender</h6>
                                                                 </div>
                                                                 <div class="card-body">
-                                                                    <p>Nilai Kontrak : Rp.50.000.000</p>
-                                                                    <p>Paket : </p>
+                                                                    <p>Nilai Kontrak : Rp.<?php echo number_format($nontender['harga_penawaran']);?></p>
+                                                                    <p>Paket : <?php echo $nontender['jenis_paket']; ?></p>
                                                                 </div>
                                                             </div>
                                                         </div>
