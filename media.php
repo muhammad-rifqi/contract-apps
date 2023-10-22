@@ -3,6 +3,9 @@ include "admin/config.php";
 $tender = mysqli_fetch_assoc(mysqli_query($koneksi,"select * from sppbj where jenis_paket = 'tender' order by id desc limit 1"));
 $nontender = mysqli_fetch_assoc(mysqli_query($koneksi,"select * from sppbj where jenis_paket = 'non_tender' order by id desc limit 1"));
 $sppbj = mysqli_query($koneksi,"select * from sppbj");
+$bs = mysqli_query($koneksi,"select * from tender where status = 'belum_selesai' ");
+$op = mysqli_query($koneksi,"select * from tender where status = 'on_progress' ");
+$ss = mysqli_query($koneksi,"select * from tender where status = 'sudah_selesai' ");
 
 ?>
 <!DOCTYPE html>
@@ -122,8 +125,8 @@ $sppbj = mysqli_query($koneksi,"select * from sppbj");
                                                                 <h6 class="m-0 font-weight-bold text-default">Kontrak Berjalan</h6>
                                                             </div>
                                                             <div class="card-body">
-                                                                    <p>Nilai Kontrak : Rp.50.000.000</p>
-                                                                    <p>Paket : </p>
+                                                                    <p>Nilai Kontrak : Rp.57.000.000</p>
+                                                                    <p>Paket : Tender </p>
                                                             </div>
                                                         </div>
                                                         </div>
@@ -134,8 +137,8 @@ $sppbj = mysqli_query($koneksi,"select * from sppbj");
                                                                 <h6 class="m-0 font-weight-bold text-default">Kontrak Selesai</h6>
                                                             </div>
                                                             <div class="card-body">
-                                                                    <p>Nilai Kontrak : Rp.50.000.000</p>
-                                                                    <p>Paket : </p>
+                                                                    <p>Nilai Kontrak : Rp.57.000.000</p>
+                                                                    <p>Paket : Tender </p>
                                                             </div>
                                                         </div>
                                                         </div>
@@ -146,8 +149,8 @@ $sppbj = mysqli_query($koneksi,"select * from sppbj");
                                                                 <h6 class="m-0 font-weight-bold text-default">Kontrak Terbayar</h6>
                                                             </div>
                                                             <div class="card-body">
-                                                                    <p>Nilai Kontrak : Rp.50.000.000</p>
-                                                                    <p>Paket : </p>
+                                                                    <p>Nilai Kontrak : Rp.57.000.000</p>
+                                                                    <p>Paket : Non Tender </p>
                                                             </div>
                                                         </div>
                                                         </div>

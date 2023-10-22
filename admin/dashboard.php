@@ -5,6 +5,9 @@ include "config.php";
 if(empty($_SESSION['username'])){
     echo "<h1>Session Expired!</h1>";
 }else{ 
+    $tender = mysqli_fetch_assoc(mysqli_query($koneksi,"select * from sppbj where jenis_paket = 'tender' order by id desc limit 1"));
+    $nontender = mysqli_fetch_assoc(mysqli_query($koneksi,"select * from sppbj where jenis_paket = 'non_tender' order by id desc limit 1"));
+    
 ?>
 <!DOCT
 <!DOCTYPE html>
