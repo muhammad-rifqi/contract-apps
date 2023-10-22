@@ -2,6 +2,8 @@
 include "admin/config.php"; 
 $tender = mysqli_fetch_assoc(mysqli_query($koneksi,"select * from sppbj where jenis_paket = 'tender' order by id desc limit 1"));
 $nontender = mysqli_fetch_assoc(mysqli_query($koneksi,"select * from sppbj where jenis_paket = 'non_tender' order by id desc limit 1"));
+$sppbj = mysqli_query($koneksi,"select * from sppbj");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -173,66 +175,64 @@ $nontender = mysqli_fetch_assoc(mysqli_query($koneksi,"select * from sppbj where
                                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                             <thead>
                                             <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Office</th>
-                                                <th>Age</th>
-                                                <th>Start date</th>
-                                                <th>Salary</th>
+                                                <th>Kode Tender</th>
+                                                <th>Nama Tender</th>
+                                                <th>RUP</th>
+                                                <th>Harga Penawaran</th>
+                                                <th>No SPPBJ</th>
+                                                <th>Lampiran SPPBJ</th>
+                                                <th>Tanggal SPPBJ</th>
+                                                <th>Kota SPPBJ</th>
+                                                <th>Nama PPK</th>
+                                                <th>Nip PPK</th>
+                                                <th>Jabatan PPK</th>
+                                                <th>Nama Satuan PPK</th>
+                                                <th>Alamat Satuan PPK</th>
+                                                <th>Penyedia SPPBJ</th>
+                                                <th>Jenis Paket</th>
                                             </tr>
                                             </thead>
                                             <tfoot>
                                             <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Office</th>
-                                                <th>Age</th>
-                                                <th>Start date</th>
-                                                <th>Salary</th>
+                                                <th>Kode Tender</th>
+                                                <th>Nama Tender</th>
+                                                <th>RUP</th>
+                                                <th>Harga Penawaran</th>
+                                                <th>No SPPBJ</th>
+                                                <th>Lampiran SPPBJ</th>
+                                                <th>Tanggal SPPBJ</th>
+                                                <th>Kota SPPBJ</th>
+                                                <th>Nama PPK</th>
+                                                <th>Nip PPK</th>
+                                                <th>Jabatan PPK</th>
+                                                <th>Nama Satuan PPK</th>
+                                                <th>Alamat Satuan PPK</th>
+                                                <th>Penyedia SPPBJ</th>
+                                                <th>Jenis Paket</th>
                                             </tr>
                                             </tfoot>
                                             <tbody>
+                                           <?php 
+                                           while($datasppbjs = mysqli_fetch_assoc($sppbj)){
+                                           ?>
                                             <tr>
-                                                <td>Tiger Nixon</td>
-                                                <td>System Architect</td>
-                                                <td>Edinburgh</td>
-                                                <td>61</td>
-                                                <td>2011/04/25</td>
-                                                <td>$320,800</td>
+                                                <td><?php echo $datasppbjs['kode_tender']; ?></td>
+                                                <td><?php echo $datasppbjs['nama_tender']; ?></td>
+                                                <td><?php echo $datasppbjs['rup']; ?></td>
+                                                <td><?php echo $datasppbjs['harga_penawaran']; ?></td>
+                                                <td><?php echo $datasppbjs['no_sppbj']; ?></td>
+                                                <td><?php echo $datasppbjs['lampiran_sppbj']; ?></td>
+                                                <td><?php echo $datasppbjs['tanggal_sppbj']; ?></td>
+                                                <td><?php echo $datasppbjs['kota_sppbj']; ?></td>
+                                                <td><?php echo $datasppbjs['nama_ppk']; ?></td>
+                                                <td><?php echo $datasppbjs['nip_ppk']; ?></td>
+                                                <td><?php echo $datasppbjs['jabatan_ppk']; ?></td>
+                                                <td><?php echo $datasppbjs['nama_satuan_kerja']; ?></td>
+                                                <td><?php echo $datasppbjs['alamat_satuan_kerja']; ?></td>
+                                                <td><?php echo $datasppbjs['penyedia']; ?></td>
+                                                <td><?php echo $datasppbjs['jenis_paket']; ?></td>
                                             </tr>
-                                            <tr>
-                                                <td>Garrett Winters</td>
-                                                <td>Accountant</td>
-                                                <td>Tokyo</td>
-                                                <td>63</td>
-                                                <td>2011/07/25</td>
-                                                <td>$170,750</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Ashton Cox</td>
-                                                <td>Junior Technical Author</td>
-                                                <td>San Francisco</td>
-                                                <td>66</td>
-                                                <td>2009/01/12</td>
-                                                <td>$86,000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Cedric Kelly</td>
-                                                <td>Senior Javascript Developer</td>
-                                                <td>Edinburgh</td>
-                                                <td>22</td>
-                                                <td>2012/03/29</td>
-                                                <td>$433,060</td>
-                                            </tr>
-                                            
-                                            <tr>
-                                                <td>Donna Snider</td>
-                                                <td>Customer Support</td>
-                                                <td>New York</td>
-                                                <td>27</td>
-                                                <td>2011/01/25</td>
-                                                <td>$112,000</td>
-                                            </tr>
+                                           <?php } ?>
                                             </tbody>
                                         </table>
                                     </div>
