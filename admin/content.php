@@ -60,6 +60,14 @@ if($_GET['menu'] == 'input_kontrak_tender'){
     include "include/input_kontrak_tender.php" ;
 }
 
+if($_GET['menu'] == 'view_input_kontrak_tender'){
+    include "include/view_input_kontrak_tender.php" ;
+}
+
+if($_GET['menu'] == 'view_input_kontrak_non_tender'){
+    include "include/view_input_kontrak_non_tender.php" ;
+}
+
 if($_GET['menu'] == 'input_spmk_tender'){
     include "include/input_spmk_tender.php" ;
 }

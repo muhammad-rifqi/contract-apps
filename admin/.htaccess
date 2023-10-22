@@ -14,6 +14,7 @@ RewriteRule ^edit-non-tender-(.*)$ dashboard.php?menu=edit_non_tender&id=$1 [L]
 RewriteRule ^sppbj-non-tender-(.*)$ dashboard.php?menu=sppbj_non_tender&id=$1 [L]
 RewriteRule ^insert-sppbj-non-tender-(.*)$ dashboard.php?menu=tambah_sppbj_non_tender&id=$1 [L]
 RewriteRule ^input-kontrak-tender-(.*)$ dashboard.php?menu=input_kontrak_tender&id=$1 [L]
+RewriteRule ^view-input-kontrak-tender-(.*)$ dashboard.php?menu=view_input_kontrak_tender&id=$1 [L]
 RewriteRule ^input-spmk-tender$ dashboard.php?menu=input_spmk_tender [L]
 RewriteRule ^input-pembayaran-tender$ dashboard.php?menu=input_pembayaran_tender [L]
 RewriteRule ^input-termin-tender$ dashboard.php?menu=input_termin_tender [L]
@@ -31,7 +32,7 @@ RewriteRule ^add-pencatatan-swakelola$ dashboard.php?menu=add_pencatatan_swakelo
 RewriteRule ^add-pengadaan-darurat$ dashboard.php?menu=add_pengadaan_darurat [L]
 
 RewriteRule ^input-kontrak-non-tender-(.*)$ dashboard.php?menu=input_kontrak_non_tender&id=$1 [L]
-
+RewriteRule ^view-input-kontrak-non-tender-(.*)$ dashboard.php?menu=view_input_kontrak_non_tender&id=$1 [L]
 
 Options All Indexes
 ErrorDocument 404 error

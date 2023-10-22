@@ -156,7 +156,7 @@
 
         <br>
         <p>
-            <button type="submit" class="btn btn-primary"> Simpan </button>
+            <button type="submit" class="btn btn-primary"> Simpan </button> | <a href="view-input-kontrak-tender-<?php echo $_GET['id'];?>"> View Data </a>
         </p>
         </form>
     </div>
