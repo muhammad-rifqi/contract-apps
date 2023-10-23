@@ -164,13 +164,13 @@ $ss = mysqli_query($koneksi,"select * from tender where status = 'sudah_selesai'
 
                         </div>
                         <hr>
-                        <h3>Persentase</h3><br>
+                        <!-- <h3>Persentase</h3><br>
                         <div class="row">
                             <div class="col-12 px-1">
                                 <canvas id="myChart" style="width:100%;"></canvas>
                             </div>
                         </div>
-                        <hr>
+                        <hr> -->
                         <div class="row">                            
                             <div class="col-12 px-1">
 
