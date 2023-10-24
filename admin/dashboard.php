@@ -86,7 +86,7 @@ if(empty($_SESSION['username'])){
                                 <div class="col-2 px-2 text-center text-dark">
                                 <a href="non_tender"><u>Non Tender</u></a>                                   
                                 </div>
-                                <div class="col-2 px-2 text-center text-dark">
+                                <!-- <div class="col-2 px-2 text-center text-dark">
                                     <a href="pencatatan-non-tender"><u>Pencatatan Non Tender</u></a>
                                 </div>
                                 <div class="col-2 px-2 text-center text-dark">
@@ -94,12 +94,12 @@ if(empty($_SESSION['username'])){
                                 </div>
                                 <div class="col-4 px-2 text-center text-dark">
                                     <a href="pengadaan-darurat"><u>Pengadaan Darurat</u></a>                                    
-                                </div> 
+                                </div>  -->
                         </div>
-                        <hr>
+                        <!-- <hr> -->
                         <br>
 
-                        <div class="alert alert-danger" role="alert">
+                        <!-- <div class="alert alert-danger" role="alert">
                             <h4>Fitur e-Kontrak akan aktif jika : </h4>
                             <ul>
                                 <li>Sudah masuk tahap SPPBJ atau sudah melewati tahapan upload dokumen Penawaran untuk Tender Cepat;</li>
@@ -107,7 +107,7 @@ if(empty($_SESSION['username'])){
                                 <li>Seluruh sanggah sudah dijawab oleh Pokja Pemilihan; dan/atau </li>
                                 <li>Seluruh jawaban sanggah Salah/Ditolak.</li>
                             </ul>
-                        </div>
+                        </div> -->
                         <hr>
                         <br>
                         <div class="row">                            
